@@ -42,11 +42,11 @@ class Percolation {
   /**
    * Constructs the object for class percolation.
    *
-   * @param      size  The size
+   * @param      siz  The size
    */
-  Percolation(final int size) {
-    grid = new boolean[size][size];
-    this.size = size;
+  Percolation(final int siz) {
+    grid = new boolean[siz][siz];
+    this.size = siz;
     unionFind = new WeightedQuickUnionUF(size * size + 2);
     openSitesNumber = 0;
     sizeOfGrid = size * size;
