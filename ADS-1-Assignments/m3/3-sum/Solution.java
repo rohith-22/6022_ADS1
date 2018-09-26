@@ -13,7 +13,7 @@ class ThreeSum {
 					k -= 1;
 				} else {
 					j = 1;
-					k -= 1;
+					k = 1;
 					countOfThreeSums += 1;
 				}
 			}
