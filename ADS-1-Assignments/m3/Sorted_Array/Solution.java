@@ -18,10 +18,10 @@ public class Solution {
 		int i = 0, j = 0, k = 0;
 		while (i < firstArray.length && j < secondArray.length) {
 			if (firstArray[i] < secondArray[j]) {
-				resultArray[i++] = firstArray[i];
+				resultArray[k++] = firstArray[i];
 				i = i + 1;
 			} else if (firstArray[i] > secondArray[j]) {
-				resultArray[i++] = secondArray[j];
+				resultArray[k++] = secondArray[j];
 				j = j + 1;
 			}
 		}
