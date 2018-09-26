@@ -5,7 +5,7 @@ import java.util.Arrays;
  */
 class ThreeSum {
   /**
-   * count function givs the count of the threesum pairs
+   * count function givs the count of the threesum pairs.
    *
    * @param      arrayOfNumbers  The array of numbers
    *
@@ -19,7 +19,8 @@ class ThreeSum {
       while (j < k) {
         if (arrayOfNumbers[i] + arrayOfNumbers[j] + arrayOfNumbers[k] < 0) {
           j++;
-        } else if (arrayOfNumbers[i] + arrayOfNumbers[j] + arrayOfNumbers[k] > 0) {
+        } else if (arrayOfNumbers[i] + arrayOfNumbers[j]
+                   + arrayOfNumbers[k] > 0) {
           k--;
         } else {
           j++;
@@ -34,7 +35,13 @@ class ThreeSum {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+
+  }
   /**
    * main function.
    *
