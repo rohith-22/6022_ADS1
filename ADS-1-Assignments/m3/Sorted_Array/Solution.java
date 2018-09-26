@@ -5,6 +5,12 @@ import java.util.Arrays;
  */
 public class Solution {
   /**
+   * Constructs the object.
+   */
+  private Solution() {
+
+  }
+  /**
    * returns the int array for a string.
    *
    * @param      s     string parameter
@@ -17,17 +23,18 @@ public class Solution {
            .toArray();
   }
   /**
-   * main function
+   * main function.
    *
    * @param      args  The arguments
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     Scanner sc = new Scanner(System.in);
     int[]firstArray = new int[sc.nextInt()];
     int[]secondArray = new int[sc.nextInt()];
     if (firstArray.length != 0) {
       firstArray = intArray(sc.next());
-    } if (secondArray.length != 0) {
+    }
+    if (secondArray.length != 0) {
       secondArray = intArray(sc.next());
     }
     int[] resultArray = new int[firstArray.length + secondArray.length];
