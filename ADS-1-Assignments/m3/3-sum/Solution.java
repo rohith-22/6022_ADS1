@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
 class ThreeSum {
 	public int  count(int[] arrayOfNumbers) {
 		int countOfThreeSums = 0, j = 0, k = 0;
