@@ -12,7 +12,7 @@ class ThreeSum {
 				} else if (arrayOfNumbers[i] + arrayOfNumbers[j] + arrayOfNumbers[k] > 0) {
 					k -= 1;
 				} else {
-					j += 1;
+					j = 1;
 					k -= 1;
 					countOfThreeSums += 1;
 				}
