@@ -15,7 +15,7 @@ public class Solution {
 			secondArray = intArray(sc.next());
 		}
 		int[] resultArray = new int[firstArray.length + secondArray.length];
-		int i = 0, j = 0;
+		int i = 0, j = 0, k = 0;
 		while (i < firstArray.length && j < secondArray.length) {
 			if (firstArray[i] < secondArray[j]) {
 				resultArray[i++] = firstArray[i];
@@ -26,14 +26,14 @@ public class Solution {
 			}
 		}
 		if (firstArray.length > secondArray.length) {
-			while (i < firstArray.length + secondArray.length) {
-				resultArray[i++] = firstArray[i++];
+			while (k < firstArray.length + secondArray.length) {
+				resultArray[k++] = firstArray[i++];
 			}
 
 		}
 		if (secondArray.length > firstArray.length) {
-			while (i < firstArray.length + secondArray.length) {
-				resultArray[i++] = secondArray[j++];
+			while (k < firstArray.length + secondArray.length) {
+				resultArray[k++] = secondArray[j++];
 			}
 		}
 		System.out.println(Arrays.toString(resultArray).replace("[", "").replace("]", "").replace(" ", ""));
