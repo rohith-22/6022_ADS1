@@ -33,7 +33,8 @@ class BalancedBrackets {
    */
   public String isBalanced() {
     for (int i = 0; i < string.length(); i++) {
-      if (string.charAt(i) == '(' || string.charAt(i) == '{' || string.charAt(i) == '[') {
+      if (string.charAt(i) == '('
+          || string.charAt(i) == '{' || string.charAt(i) == '[') {
         list[size++] = string.charAt(i);
       }
       if (size != 0) {
