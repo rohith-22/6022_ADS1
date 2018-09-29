@@ -66,24 +66,44 @@ class AddLargeNumbers {
     }
     return str;
   }
+  public String print(LinkedList list) {
+    String tempStrng = "";
+    String tempString2 = "";
+    // System.out.println(list.size());
+    for (int i = 0; i < list.size(); i++) {
+      // System.out.println(list.pop());
+      tempStrng += list.pop();
 
+    }
+      for (int i = 1; i < list.size(); i++) {
+         tempString2 += tempStrng.charAt(i);
+      }
+    return tempString2;
+  }
+  
   public  LinkedList addLargeNumbers(LinkedList list1,
                                      LinkedList list2) {
-    
+    int sum = 0;
     LinkedList result = new LinkedList();
     for (int i = 0; i < list1.size(); i++) {
-      int sum = 0;
-      sum = list1.pop() + list2.pop();
+      // System.out.println(sum + "here");
+      sum += list1.pop() + list2.pop();
+      if (sum >= 10 && i < list1.size() - 1) {
+        String string = "" + sum;
+        // System.out.println(string);
+        result.push(Character.getNumericValue(string.charAt(1)));
+        sum = Character.getNumericValue(string.charAt(0));
+        // System.out.println(sum);/
+        // System.out.println(sum);
+      } else{
+        result.push(sum);
+        sum = 0;
+      }
+      if ( i == list1.size() - 1) {
+        result.push(sum);
+      }
 
-      // if(sum > 10) {
-      //   String string = "" + sum;
-      //   result.push(Character.getNumericValue(string.charAt(1)));
-      //   sum = Character.getNumericValue(string.charAt(0));
-      // }
-      // else {
-      //   sum = 0;
-      // }
-      result.push(sum);
+      
       // digitsToNumber(result);
     }
     return result;
@@ -109,7 +129,7 @@ public class Solution {
       pDigits = objectAdd.numberToDigits(p);
       qDigits = objectAdd.numberToDigits(q);
       LinkedList result = objectAdd.addLargeNumbers(pDigits, qDigits);
-      System.out.println(objectAdd.digitsToNumber(result));
+      System.out.println(objectAdd.print(result));
       break;
     }
   }
