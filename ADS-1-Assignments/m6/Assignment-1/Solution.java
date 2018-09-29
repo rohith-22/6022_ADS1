@@ -23,20 +23,16 @@ class LinkedList {
 
   public void push(int e) {
     Node node = new Node();
-    if (head == null) {
-      // System.out.println("entered");
-      node.data = e;
-      node.next = null;
+    node.data = e;
+    node.next = head;
+    size++;
+
+    if (head == node) {
       head = node;
-      size++;
-      return;
-    } else {
-      // System.out.println("bye");
-      node.data = e;
-      node.next = head;
-      head = node;
-      size++;
+
     }
+
+    head = node;
   }
 
   public int pop() {
@@ -66,14 +62,31 @@ class AddLargeNumbers {
     // System.out.println(list.size());
     for (int i = 0; i < list.size(); i++) {
       // System.out.println(list.pop());
-      str += list.pop();
+      str = list.pop() + str;
     }
     return str;
   }
 
   public  LinkedList addLargeNumbers(LinkedList list1,
                                      LinkedList list2) {
-    return null;
+    
+    LinkedList result = new LinkedList();
+    for (int i = 0; i < list1.size(); i++) {
+      int sum = 0;
+      sum = list1.pop() + list2.pop();
+
+      // if(sum > 10) {
+      //   String string = "" + sum;
+      //   result.push(Character.getNumericValue(string.charAt(1)));
+      //   sum = Character.getNumericValue(string.charAt(0));
+      // }
+      // else {
+      //   sum = 0;
+      // }
+      result.push(sum);
+      // digitsToNumber(result);
+    }
+    return result;
   }
 }
 
