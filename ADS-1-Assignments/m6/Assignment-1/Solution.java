@@ -68,15 +68,19 @@ class AddLargeNumbers {
   }
   public String print(LinkedList list) {
     String tempStrng = "";
-    // String tempString2 = "";
+    String tempString2 = "";
     // System.out.println(list.size());
     for (int i = 0; i < list.size(); i++) {
       // System.out.println(list.pop());
       tempStrng += list.pop();
-    }
-    return tempStrng;
-  }
 
+    }
+      for (int i = 1; i < tempStrng.length(); i++) {
+         tempString2 += tempStrng.charAt(i);
+      }
+    return tempString2;
+  }
+  
   public  LinkedList addLargeNumbers(LinkedList list1,
                                      LinkedList list2) {
     int sum = 0;
@@ -91,7 +95,7 @@ class AddLargeNumbers {
         sum = Character.getNumericValue(string.charAt(0));
         // System.out.println(sum);/
         // System.out.println(sum);
-      } else {
+      } else{
         result.push(sum);
         sum = 0;
       }
@@ -99,7 +103,7 @@ class AddLargeNumbers {
         result.push(sum);
       }
 
-
+      
       // digitsToNumber(result);
     }
     return result;
