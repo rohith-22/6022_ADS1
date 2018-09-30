@@ -22,11 +22,11 @@ class Queue {
         /**.
          * data variable to store the data
          */
-        int data;
+        private int data;
         /**.
          * Node object to point to the next Node
          */
-        Node link;
+        private Node link;
         /**.
          * Node constructor without arguments
          */
@@ -37,10 +37,10 @@ class Queue {
         /**.
          * Node constructor with arguments
          *
-         * @param      data  The data
+         * @param      nodeData  The data
          */
-        Node(final int data) {
-            this.data = data;
+        Node(final int nodeData) {
+            this.data = nodeData;
             this.link = null;
         }
     }
