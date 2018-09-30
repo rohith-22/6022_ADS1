@@ -8,11 +8,11 @@ class Deque<E> {
   /**.
    *  variable Size.
    */
-  int size;
+  private int size;
   /**.
    * Object for linked list.
    */
-  LinkedList<E> queue;
+  private LinkedList<E> queue;
   /**
    * Constructs the object for deque.
    */
@@ -105,28 +105,28 @@ public final class Solution {
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
-    Deque<Integer> d = new Deque<Integer>();
+    Deque<Integer> deQueue = new Deque<Integer>();
     Scanner scan = new Scanner(System.in);
     while (scan.hasNext()) {
       String[] tokens = scan.nextLine().split(" ");
       switch (tokens[0]) {
       case "pushLeft":
-        d.pushLeft(Integer.parseInt(tokens[1]));
+        deQueue.pushLeft(Integer.parseInt(tokens[1]));
         break;
       case "pushRight":
-        d.pushRight(Integer.parseInt(tokens[1]));
+        deQueue.pushRight(Integer.parseInt(tokens[1]));
         break;
       case "size":
-        System.out.println(d.size());
+        System.out.println(deQueue.size());
         break;
       case "isEmpty":
-        System.out.println(d.isEmpty());
+        System.out.println(deQueue.isEmpty());
         break;
       case "popLeft":
-        d.popLeft();
+        deQueue.popLeft();
         break;
       case "popRight":
-        d.popRight();
+        deQueue.popRight();
         break;
       default:
         break;
