@@ -75,7 +75,11 @@ class Deque<E> {
   /**.
    * this method removes from right end.
    */
-  public void popRight() throws Exception{
+  public void popRight() {
+    if (size == 0) {
+      System.out.println("Deck is empty");
+      return;
+    }
     size--;
     queue.removeAtEnd();
     if (queue.getSize() == 0) {
@@ -122,11 +126,7 @@ public final class Solution {
         d.popLeft();
         break;
       case "popRight":
-        try {
-          d.popRight();
-        } catch (Exception e) {
-          System.out.println("Deck is empty");
-        }
+        d.popRight();
         break;
       default:
         break;
