@@ -1,0 +1,13 @@
+Qsn-
+
+Stack stack= new Stack();
+while (!q.isEmpty())
+	stack.push(q.dequeue());
+while (!stack.isEmpty())
+	q.enqueue(stack.pop());
+
+
+Ans-
+
+In firts while - untill queue is empty it pushes each element to stack and deqeues it.
+In second while - until queu is empty it pops the stack and adds each element to queue.
