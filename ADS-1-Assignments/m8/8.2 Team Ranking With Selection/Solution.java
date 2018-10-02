@@ -31,10 +31,10 @@ class Team {
      */
     Team(final String n, final int w,
                     final int l, final int d) {
-        this.name = name;
-        this.wins = wins;
-        this.losses = losses;
-        this.draws = draws;
+        this.name = n;
+        this.wins = w;
+        this.losses = l;
+        this.draws = d;
     }
     /**
      * Gets the team name.
