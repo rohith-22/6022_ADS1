@@ -82,13 +82,22 @@ class Team {
      * @return     int
      */
     public int compareTo(final Team other) {
-        if (this.wins > other.wins) return 1;
-        if (this.wins < other.wins) return -1;
-        if (this.losses < other.losses) return 1;
-        if (this.losses > other.losses) return -1;
-        if (this.draws > other.draws) return 1;
-        if (this.draws < other.draws) return -1;
-        else return 0;
+        if (this.wins > other.wins) {
+            return 1;
+        }
+        if (this.wins == other.wins) {
+            if (this.losses < other.losses) {
+                return -1;
+            }
+        }
+        if (this.wins == other.wins) {
+            if (this.losses == other.losses) {
+                if (this.draws > other.draws) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
     }
 }
 /**
