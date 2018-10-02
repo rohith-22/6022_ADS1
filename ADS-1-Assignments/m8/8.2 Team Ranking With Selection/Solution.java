@@ -107,7 +107,7 @@ class ScoreCard {
     /**
      *  array of Team class objects.
      */
-    private Team[] Team;
+    private Team[] team;
     /**
      *  inr variable size.
      */
@@ -122,7 +122,7 @@ class ScoreCard {
     ScoreCard() {
         final int ten = 10;
         objectSort = new SelectionSortTeam();
-        Team = new Team[ten];
+        team = new Team[ten];
         size = 0;
     }
     /**
@@ -132,7 +132,7 @@ class ScoreCard {
      * @param      teamdata  Team object
      */
     public void add(final Team teamdata) {
-        Team[size] = teamdata;
+        team[size] = teamdata;
         size += 1;
     }
     /**
@@ -149,8 +149,8 @@ class ScoreCard {
      *
      */
     public void teamRanking() {
-        Team = Arrays.copyOf(Team, size);
-        Team = objectSort.teamSorting(Team);
+        team = Arrays.copyOf(team, size);
+        team = objectSort.teamSorting(team);
     }
     /**
      * Returns a string representation
@@ -163,9 +163,9 @@ class ScoreCard {
         String str = "";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
-            str += Team[i].getName() + ",";
+            str += team[i].getName() + ",";
         }
-        str += Team[i].getName();
+        str += team[i].getName();
         return str;
     }
 }
