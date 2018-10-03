@@ -52,7 +52,7 @@ class Sorting {
 		if (hi <= low + seven) {
 			InsertionSort objectInsertionSort = new InsertionSort();
 			objectInsertionSort.insertionSort(newlist, low, hi);
-			System.out.println("Insertion sort method ivoked...");
+			System.out.println("Insertion sort method invoked...");
 			return;
 		}
 		int mid = low + (hi - low) / 2;
