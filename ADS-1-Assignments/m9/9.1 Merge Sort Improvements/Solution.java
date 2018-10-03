@@ -21,10 +21,12 @@ class InsertionSort {
   public void insertionSort(final Comparable[] list,
                             final int low, final int hi) {
     Sorting objectSort = new Sorting();
-    for (int i = low; i <= hi; i++)
+    for (int i = low; i <= hi; i++) {
       for (int j = i; j > low && objectSort.less(list[j],
-           list[j - 1]); j--)
+           list[j - 1]); j--) {
         exchange(list, j, j - 1);
+      }
+    }
   }
   /**
    * exchange function swaps the elements using the index.
@@ -73,13 +75,9 @@ class MergeSort {
     for (int k = low; k <= hi; k++) {
       if (i > mid) {
         newlist[k] = list[j++];
-      }
-
-      else if (j > hi) {
+      } else if (j > hi) {
         newlist[k] = list[i++];
-      }
-
-      else if (objectSort.less(list[j], list[i])) {
+      } else if (objectSort.less(list[j], list[i])) {
         newlist[k] = list[j++];
       } else {
         newlist[k] = list[i++];
@@ -172,10 +170,11 @@ class Sorting {
    */
   public boolean isSorted(final Comparable[] array,
                           final int low, final int hi) {
-    for (int i = low + 1; i <= hi; i++)
+    for (int i = low + 1; i <= hi; i++) {
       if (less(array[i], array[i - 1])) {
         return false;
       }
+    }
     return true;
   }
   /**
@@ -199,6 +198,12 @@ class Sorting {
  * Class for solution.
  */
 public final class Solution {
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+
+  }
   /**
    * main function to handle input and output.
    *
