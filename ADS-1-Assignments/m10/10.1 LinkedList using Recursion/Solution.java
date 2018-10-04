@@ -1,28 +1,64 @@
 import java.util.Scanner;
+/**
+ * List of linkeds.
+ */
 class LinkedList {
-
+  /**
+   * Class for node.
+   */
   private class Node {
-
-    int data;
+    /**
+     * variable value.
+     */
+    int value;
+    /**
+     * variable next.
+     */
     Node next;
-
+    /**
+     * Constructs the object.
+     */
     Node() {}
-
-
-    Node(int data) {
-      this.data = data;
+    /**
+     * Constructs the object.
+     *
+     * @param      value  The value
+     */
+    Node(int value) {
+      this.value = value;
       this.next = next;
     }
   }
-
+  /**
+   * varaible head.
+   */
   private Node head;
+  /**
+   * variable tail.
+   */
   private Node tail;
+  /**
+   * variable size.
+   */
   private int size;
+  /**
+   * Constructs the object.
+   */
   LinkedList() {
     this.head = null;
     this.tail = null;
     this.size = 0;
   }
+  /**
+   * this function is used to insert given value at given index.
+   * Complexity of this function is O(N) as it is a reccursive.
+   * function.
+   *
+   * @param      index      The index
+   * @param      value      The value
+   *
+   * @throws     Exception  throws exception if index is not valid.
+   */
   public void insertAt(int index, int value) throws Exception {
 
     if (index < 0 || index > size) {
@@ -31,7 +67,19 @@ class LinkedList {
     head = insertAt(head, new Node(value), index, 0);
     size++;
   }
-  private Node insertAt(Node curr, Node newNode, int index, int currIndex) {
+  /**
+   * this is a overloaded method.
+   *Complexity of this function is O(N) as it is a reccursive.
+   * function.
+   * @param      curr       The curr
+   * @param      newNode    The new node
+   * @param      index      The index
+   * @param      currIndex  The curr index
+   *
+   * @return     returns a node to its overloaded method.
+   */
+  private Node insertAt(Node curr,
+                        Node newNode, int index, int currIndex) {
     if (curr == null) {
       return newNode;
     } else if (currIndex == index) {
@@ -43,6 +91,11 @@ class LinkedList {
     return curr;
 
   }
+  /**
+   * this method reverses the present linked list.
+   * Time complexity for this method is O(N).
+   * @throws     Exception  it throws no element to reverse exception.
+   */
 
   public void reverse() throws Exception {
     if (size == 0) {
@@ -51,6 +104,14 @@ class LinkedList {
     reverse(head, null);
 
   }
+  /**
+   * overloaded methos for reverse.
+   *
+   * @param      curr  The curr
+   * @param      prev  The previous
+   *
+   * @return     returns the Node.
+   */
   private Node reverse(Node curr, Node prev) {
 
 
@@ -67,14 +128,17 @@ class LinkedList {
     reverse(temp, curr);
     return head;
   }
+  /**
+   * prints the linked list.
+   */
   public void display() {
     Node curr = head;
     String result = "";
     while (curr != null) {
       if (curr.next == null) {
-        result += curr.data;
+        result += curr.value;
       } else {
-        result += curr.data + ", ";
+        result += curr.value + ", ";
       }
       curr = curr.next;
     }
@@ -82,8 +146,15 @@ class LinkedList {
     System.out.println(result);
   }
 }
+/**
+ * Class for solution.
+ */
 public class Solution {
-
+  /**
+   * main method to handle input,output and switch cases.
+   *
+   * @param      args  The arguments
+   */
   public static void main(String[] args) {
     LinkedList object = new LinkedList();
     Scanner sc = new Scanner(System.in);

@@ -1,0 +1,22 @@
+Starting audit...
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:13:9: Variable 'value' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:17:10: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:21:13: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:21:13: '}' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:27:10: Parameter value should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:27:14: 'value' hides a field. [HiddenField]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:62:24: Parameter index should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:62:35: Parameter value should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:65:27: '(' is preceded with whitespace. [MethodParamPad]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:81:25: Parameter curr should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:82:25: Parameter newNode should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:82:39: Parameter index should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:82:50: Parameter currIndex should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:115:24: Parameter curr should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:115:35: Parameter prev should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:152:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:158:27: Parameter args should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:164: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m10/10.1 LinkedList using Recursion/Solution.java:167: Line is longer than 80 characters (found 84). [LineLength]
+Audit done.
+Checkstyle ends with 19 errors.
