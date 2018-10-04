@@ -67,15 +67,14 @@ class LinkedList {
     reverse(temp, curr);
     return head;
   }
-  public void display(){
+  public void display() {
     Node curr = head;
     String result = "";
-    while(curr!=null){
-      if(curr.next == null){
+    while (curr != null) {
+      if (curr.next == null) {
         result += curr.data;
-      }
-      else{
-        result += curr.data+", ";
+      } else {
+        result += curr.data + ", ";
       }
       curr = curr.next;
     }
@@ -90,22 +89,26 @@ public class Solution {
     Scanner sc = new Scanner(System.in);
     while (sc.hasNext()) {
       String[] tokens = sc.nextLine().split(" ");
-      switch (tokens[0]) {
-      case "insertAt" :
-        try {
+      try {
+        switch (tokens[0]) {
+
+        case "insertAt" :
           object.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
           object.display();
-        } catch (Exception e) {
-          System.out.println(e.getMessage());
-        }
-      case "reverse":
-        try {
+          // } catch (Exception e) {
+          //   System.out.println(e.getMessage());
+          break;
+        case "reverse":
+          // try {
           object.reverse();
           object.display();
-        } catch (Exception e) {
-          System.out.println(e.getMessage());
+          break;
         }
+      } catch (Exception e) {
+        System.out.println(e.getMessage());
+
       }
+
     }
   }
 }
