@@ -1,0 +1,14 @@
+On branch master
+Your branch is ahead of 'origin/master' by 10 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+	modified:   ../../m9/9.1 Merge Sort Improvements/git_output.txt
+
+Untracked files:
+	../../m8/8.1 Team Ranking With Insertion/Solution.java
+	../../m8/8.2 Team Ranking With Selection/Solution.java
+	../../../ADS-1-practice/m3/BinarySearch/
+	../../../ADS-1-practice/m4/4.2 Evaluate Postfix/
+
+no changes added to commit
