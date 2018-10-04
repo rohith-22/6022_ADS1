@@ -10,22 +10,24 @@ class LinkedList {
     /**
      * variable value.
      */
-    int value;
+    private int value;
     /**
      * variable next.
      */
-    Node next;
+    private Node next;
     /**
      * Constructs the object.
      */
-    Node() {}
+    Node() {
+
+    }
     /**
      * Constructs the object.
      *
      * @param      value  The value
      */
-    Node(final int value) {
-      this.value = value;
+    Node(final int data) {
+      this.value = data;
       this.next = next;
     }
   }
@@ -62,7 +64,7 @@ class LinkedList {
   public void insertAt(final int index, final int value) throws Exception {
 
     if (index < 0 || index > size) {
-      throw new Exception ("Can't insert at this position.");
+      throw new Exception("Can't insert at this position.");
     }
     head = insertAt(head, new Node(value), index, 0);
     size++;
@@ -152,6 +154,12 @@ class LinkedList {
  */
 public class Solution {
   /**
+   * Constructs the object.
+   */
+  private Solution() {
+
+  }
+  /**
    * main method to handle input,output and switch cases.
    *
    * @param      args  The arguments
@@ -165,7 +173,8 @@ public class Solution {
         switch (tokens[0]) {
 
         case "insertAt" :
-          object.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+          object.insertAt(Integer.parseInt(tokens[1]),
+                          Integer.parseInt(tokens[2]));
           object.display();
           // } catch (Exception e) {
           //   System.out.println(e.getMessage());
@@ -175,6 +184,7 @@ public class Solution {
           object.reverse();
           object.display();
           break;
+        default:
         }
       } catch (Exception e) {
         System.out.println(e.getMessage());
