@@ -67,6 +67,21 @@ class LinkedList {
     reverse(temp, curr);
     return head;
   }
+  public void display(){
+    Node curr = head;
+    String result = "";
+    while(curr!=null){
+      if(curr.next == null){
+        result += curr.data;
+      }
+      else{
+        result += curr.data+", ";
+      }
+      curr = curr.next;
+    }
+
+    System.out.println(result);
+  }
 }
 public class Solution {
 
@@ -79,14 +94,14 @@ public class Solution {
       case "insertAt" :
         try {
           object.insertAt(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
-          System.out.println(object);
+          object.display();
         } catch (Exception e) {
           System.out.println(e.getMessage());
         }
       case "reverse":
         try {
           object.reverse();
-          System.out.println(object);
+          object.display();
         } catch (Exception e) {
           System.out.println(e.getMessage());
         }
