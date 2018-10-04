@@ -24,7 +24,7 @@ class LinkedList {
      *
      * @param      value  The value
      */
-    Node(int value) {
+    Node(final int value) {
       this.value = value;
       this.next = next;
     }
@@ -59,7 +59,7 @@ class LinkedList {
    *
    * @throws     Exception  throws exception if index is not valid.
    */
-  public void insertAt(int index, int value) throws Exception {
+  public void insertAt(final int index, final int value) throws Exception {
 
     if (index < 0 || index > size) {
       throw new Exception ("Can't insert at this position.");
@@ -78,8 +78,9 @@ class LinkedList {
    *
    * @return     returns a node to its overloaded method.
    */
-  private Node insertAt(Node curr,
-                        Node newNode, int index, int currIndex) {
+  private Node insertAt(final Node curr,
+                        final Node newNode,
+                        final int index, final int currIndex) {
     if (curr == null) {
       return newNode;
     } else if (currIndex == index) {
@@ -112,7 +113,7 @@ class LinkedList {
    *
    * @return     returns the Node.
    */
-  private Node reverse(Node curr, Node prev) {
+  private Node reverse(final Node curr, final Node prev) {
 
 
 
@@ -155,7 +156,7 @@ public class Solution {
    *
    * @param      args  The arguments
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     LinkedList object = new LinkedList();
     Scanner sc = new Scanner(System.in);
     while (sc.hasNext()) {
