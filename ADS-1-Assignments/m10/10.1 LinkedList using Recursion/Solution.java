@@ -25,7 +25,7 @@ class LinkedList {
   }
   public void insertAt(int index, int value) throws Exception {
 
-    if (index < 0 || index >= size) {
+    if (index < 0 || index > size) {
       throw new Exception ("Can't insert at this position.");
     }
     head = insertAt(head, new Node(value), index, 0);
