@@ -24,7 +24,7 @@ class LinkedList {
     /**
      * Constructs the object.
      *
-     * @param      value  The value
+     * @param      data  The value
      */
     Node(final int data) {
       this.value = data;
@@ -152,7 +152,7 @@ class LinkedList {
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
   /**
    * Constructs the object.
    */
