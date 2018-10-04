@@ -1,0 +1,6 @@
+[master 6be7818] "ads1_m10_a1: 3/3 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 6 files changed, 23 insertions(+), 35 deletions(-)
+ rewrite ADS-1-Assignments/m10/10.1 LinkedList using Recursion/LinkedList$Node.class (92%)
+ rewrite ADS-1-Assignments/m10/10.1 LinkedList using Recursion/LinkedList.class (73%)
+ rewrite ADS-1-Assignments/m10/10.1 LinkedList using Recursion/check_style_errors.txt (93%)
+ rewrite ADS-1-Assignments/m10/10.1 LinkedList using Recursion/git_output.txt (100%)
