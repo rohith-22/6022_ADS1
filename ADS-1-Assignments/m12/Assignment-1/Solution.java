@@ -57,7 +57,6 @@ class StudentInformation {
   /**
    * comparator.
    */
-  
   static Comparator<StudentInformation> studentComparator =
   new Comparator<StudentInformation>() {
     public int compare(final StudentInformation student1,
@@ -197,8 +196,8 @@ class Sort {
    * gives decending order of array.
    *
    * @param      arr    The arr
-   * @param      start  The start
-   * @param      end    The end
+   * @param      strt  The start
+   * @param      eend    The end
    */
   public static void decendingOrder(final StudentInformation[] arr,
                                     final int strt, final int eend) {
@@ -308,6 +307,7 @@ public final class Solution {
         for (int l = 0; l < size; l++) {
           if (!each.getName().equals(meritList[l].getName())) {
             meritList[size++] = each;
+            break;
           }
         }
       }
