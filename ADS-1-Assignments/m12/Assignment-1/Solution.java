@@ -80,6 +80,9 @@ class StudentInformation {
   public String getCategory() {
     return this.category;
   }
+  public String getName() {
+    return this.studentName;
+  }
   /**
    * Returns a string representation of the object.
    *
@@ -274,15 +277,15 @@ public final class Solution {
         stCatogery--;
       }
     }
-    if (size < meritList.length) {
-      for (StudentInformation each : listOfStudents) {
-        for (StudentInformation eachStudent : meritList) {
-          if (!each.equals(meritList)) {
-            meritList[size++] = each;
-          }
-        }
-      }
-    }
+    // if (size < meritList.length) {
+    //   for (StudentInformation each : listOfStudents) {
+    //     for (int l = 0; l < size; l++) {
+    //       if (!each.equals(meritList[l].getName())) {
+    //         meritList[size++] = each;
+    //       }
+    //     }
+    //   }
+    // }
     for (int k = 0; k < meritList.length; k++) {
       System.out.println(meritList[k]);
     }
