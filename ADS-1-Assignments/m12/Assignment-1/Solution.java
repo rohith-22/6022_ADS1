@@ -314,6 +314,8 @@ public final class Solution {
         }
       }
     }
+    Sort sorttStudents = new Sort();
+    sorttStudents.sort(listOfStudents, StudentInformation.studentComparator);
     for (int k = 0; k < meritList.length; k++) {
       System.out.println(meritList[k]);
     }
