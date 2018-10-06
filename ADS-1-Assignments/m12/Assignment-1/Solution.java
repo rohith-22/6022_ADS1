@@ -282,7 +282,7 @@ public final class Solution {
     int stCatogery = stVacancies;
     int size = 0;
     for (int i = 0; i < listOfStudents.length; i++) {
-      if (openCatogery != 0 && listOfStudents[i].getCategory().equals("Open")) {
+      if (openCatogery != 0) {
         meritList[size++] = listOfStudents[i];
         openCatogery--;
       }
@@ -314,8 +314,6 @@ public final class Solution {
         }
       }
     }
-    Sort sorttStudents = new Sort();
-    sorttStudents.sort(listOfStudents, StudentInformation.studentComparator);
     for (int k = 0; k < meritList.length; k++) {
       System.out.println(meritList[k]);
     }
