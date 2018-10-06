@@ -302,7 +302,7 @@ public final class Solution {
         stCatogery--;
       }
     }
-    if (size < meritList.length) {
+    if (size <= meritList.length) {
       for (StudentInformation each : listOfStudents) {
         for (int l = 0; l < size; l++) {
           if (!each.getName().equals(meritList[l].getName())) {
