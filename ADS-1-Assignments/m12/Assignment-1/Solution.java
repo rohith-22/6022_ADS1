@@ -302,17 +302,17 @@ public final class Solution {
         stCatogery--;
       }
     }
-    System.out.println(size);
-    if (size <= meritList.length) {
-      for (StudentInformation each : listOfStudents) {
-        for (int l = 0; l < meritList.length; l++) {
-          if (!each.getName().equals(meritList[l].getName())) {
-            meritList[size++] = each;
-            break;
-          }
-        }
-      }
-    }
+    // System.out.println(size);
+    // if (size <= meritList.length) {
+    //   for (StudentInformation each : listOfStudents) {
+    //     for (int l = 0; l < meritList.length; l++) {
+    //       if (!each.getName().equals(meritList[l].getName())) {
+    //         meritList[size++] = each;
+    //         break;
+    //       }
+    //     }
+    //   }
+    // }
     for (int k = 0; k < meritList.length; k++) {
       System.out.println(meritList[k]);
     }

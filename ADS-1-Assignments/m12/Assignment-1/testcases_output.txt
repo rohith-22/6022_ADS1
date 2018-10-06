@@ -55,10 +55,12 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
-6
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+Deepak,98,Open
+Ira,93,ST
+riya,83,Open
+Ajay,76,Open
+Arjun,75,Open
+priya,72,SC
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -133,12 +135,16 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
-8
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+Ishita,99,Open
+Deepak,98,Open
+Ira,93,ST
+tanvi,90,BC
+mahesh,87,Open
+riya,83,Open
+Ajay,76,Open
+priya,72,SC
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,90,Open
@@ -166,10 +172,9 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
-3
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+divya,99,Open
+Aditya,80,ST
+priya,76,SC
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -202,10 +207,12 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
-5
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+divya,99,Open
+Aditya,80,Open
+priya,76,SC
+Ajay,76,Open
+Tanya,66,BC
+null
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -285,10 +292,19 @@ Aryan,32,Open
 shyam,23,Open
 Shreya,23,Open
 
-7
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+divya,99,Open
+tanvi,99,Open
+Ishita,99,Open
+Deepak,98,Open
+Ira,93,Open
+Raj,87,Open
+mahesh,87,Open
+null
+null
+null
+null
+null
+null
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -370,8 +386,19 @@ Manoj,32,SC
 Aryan,32,ST
 Shreya,23,SC
 
-14
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 15
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+Ishita,99,Open
+Deepak,99,Open
+Ira,93,ST
+tanvi,90,BC
+Raj,87,BC
+mahesh,87,BC
+riya,83,Open
+Amit,76,Open
+Ajay,76,Open
+Arjun,75,Open
+rahul,73,Open
+priya,72,SC
+Priyanka,70,Open
+varsha,66,BC
+null
 ----------------------------------------
