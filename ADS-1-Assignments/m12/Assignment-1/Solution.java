@@ -55,11 +55,13 @@ class StudentInformation {
     this.category = reservation;
   }
   /**
-   * comparator
+   * comparator.
    */
+  
   static Comparator<StudentInformation> studentComparator =
   new Comparator<StudentInformation>() {
-    public int compare(StudentInformation student1, StudentInformation student2) {
+    public int compare(final StudentInformation student1,
+                       final StudentInformation student2) {
       if (student1.totalMarks - student2.totalMarks != 0) {
         return student1.totalMarks - student2.totalMarks;
       }
@@ -80,6 +82,11 @@ class StudentInformation {
   public String getCategory() {
     return this.category;
   }
+  /**
+   * Gets the name.
+   *
+   * @return     The name.
+   */
   public String getName() {
     return this.studentName;
   }
@@ -99,11 +106,16 @@ class StudentList {
   /**
    * array of list.
    */
-  private StudentInformation[] list ;
+  private StudentInformation[] list;
   /**
    * size variable.
    */
   private int size;
+  /**
+   * Constructs the object.
+   *
+   * @param      qualifiedStudents  The qualified students
+   */
   StudentList(final int qualifiedStudents) {
     list = new StudentInformation[qualifiedStudents];
     size = 0;
@@ -113,7 +125,7 @@ class StudentList {
    *
    * @param      object  The object
    */
-  public void addStudent(StudentInformation object) {
+  public void addStudent(final StudentInformation object) {
     list[size++] = object;
   }
   /**
@@ -134,6 +146,7 @@ class Sort {
    */
   Sort() {
 
+
   }
   /**
    * insertion sorting.
@@ -141,18 +154,21 @@ class Sort {
    * @param      studentList  The student list
    * @param      comparator   The comparator
    */
-  public static void sort(final Object[] studentList, final Comparator comparator) {
+  public static void sort(final Object[] studentList,
+                          final Comparator comparator) {
     int n = studentList.length;
     for (int i = 0; i < n; i++) {
       int min = i;
       for (int j = i + 1; j < n; j++) {
-        if (less(comparator, studentList[j], studentList[min])) min = j;
+        if (less(comparator, studentList[j], studentList[min])) {
+          min = j;
+        }
       }
       exch(studentList, i, min);
     }
   }
   /**
-   * compares the objecst
+   * compares the objecst.
    *
    * @param      comparator  The comparator
    * @param      v           object
@@ -165,28 +181,30 @@ class Sort {
     return comparator.compare(v, w) < 0;
   }
   /**
-   * excahnge functin exchanges the two elements
+   * excahnge functin exchanges the two elements.
    *
    * @param      studentList  The student list
    * @param      i            object
    * @param      j            object
    */
-  private static void exch(final Object[] studentList, final int i, final int j) {
+  private static void exch(final Object[] studentList,
+                           final int i, final int j) {
     Object swap = studentList[i];
     studentList[i] = studentList[j];
     studentList[j] = swap;
   }
   /**
-   * gives decending order of array
+   * gives decending order of array.
    *
    * @param      arr    The arr
    * @param      start  The start
    * @param      end    The end
    */
-  public static void decendingOrder(StudentInformation[] arr,
-                                    int start, int end) {
+  public static void decendingOrder(final StudentInformation[] arr,
+                                    final int strt, final int eend) {
     StudentInformation temp;
-
+    int start = strt;
+    int end = eend;
     while (start < end) {
       temp = arr[start];
       arr[start] = arr[end];
@@ -201,6 +219,12 @@ class Sort {
  * main solution.
  */
 public final class Solution {
+  /**
+   * Constructs the object.
+   */
+  private Solution() {
+
+  }
   /**
    * main sfuntion to handlse inpuit and output.
    *
@@ -218,12 +242,13 @@ public final class Solution {
     for (int j = 0; j < studentsQualified; j++) {
       String[] tokens = sc.next().split(",");
       // System.out.println(Arrays.toString(tokens));
+      final int three = 3, four = 4, five = 5, six = 6;
       objectList.addStudent(new StudentInformation(tokens[0], tokens[1],
                             Integer.parseInt(tokens[2]),
-                            Integer.parseInt(tokens[3]),
-                            Integer.parseInt(tokens[4]),
-                            Integer.parseInt(tokens[5]),
-                            tokens[6]));
+                            Integer.parseInt(tokens[three]),
+                            Integer.parseInt(tokens[four]),
+                            Integer.parseInt(tokens[five]),
+                            tokens[six]));
     }
     StudentInformation[] listOfStudents = objectList.getList();
     Sort sortStudents = new Sort();
@@ -247,7 +272,8 @@ public final class Solution {
    * @param      stVacancies     The st vacancies
    */
   public static void seatAlocation(final StudentInformation[] listOfStudents,
-                                   final int totalVacancies, final int openVacancies,
+                                   final int totalVacancies,
+                                   final int openVacancies,
                                    final int bcVacancies, final int scVacancies,
                                    final int stVacancies) {
     StudentInformation[] meritList = new StudentInformation[totalVacancies];
@@ -257,7 +283,7 @@ public final class Solution {
     int stCatogery = stVacancies;
     int size = 0;
     for (int i = 0; i < listOfStudents.length; i++) {
-      if (openCatogery != 0 ) {
+      if (openCatogery != 0) {
         meritList[size++] = listOfStudents[i];
         openCatogery--;
       }
@@ -289,27 +315,6 @@ public final class Solution {
     for (int k = 0; k < meritList.length; k++) {
       System.out.println(meritList[k]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   }
 }

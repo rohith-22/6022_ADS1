@@ -208,8 +208,8 @@ Tanya,66,BC
 Abhishek,60,BC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:284)
-	at Solution.main(Solution.java:236)
+	at Solution.seatAlocation(Solution.java:310)
+	at Solution.main(Solution.java:261)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -290,8 +290,8 @@ shyam,23,Open
 Shreya,23,Open
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Solution.seatAlocation(Solution.java:284)
-	at Solution.main(Solution.java:236)
+	at Solution.seatAlocation(Solution.java:310)
+	at Solution.main(Solution.java:261)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -374,6 +374,6 @@ Aryan,32,ST
 Shreya,23,SC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 15
-	at Solution.seatAlocation(Solution.java:284)
-	at Solution.main(Solution.java:236)
+	at Solution.seatAlocation(Solution.java:310)
+	at Solution.main(Solution.java:261)
 ----------------------------------------
