@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 divya,99,ST
 Deepak,98,Open
@@ -55,9 +55,12 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 5
-	at Solution.seatAlocation(Solution.java:156)
-	at Solution.main(Solution.java:131)
+divya,99,ST
+Deepak,98,Open
+Ira,93,ST
+tanvi,90,BC
+Aditya,80,ST
+priya,72,SC
 ----------------------------------------
 ########## Testcase 1: Failed ##########
 Expected Output: 
@@ -132,11 +135,16 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 7
-	at Solution.seatAlocation(Solution.java:151)
-	at Solution.main(Solution.java:131)
+divya,99,ST
+Ishita,99,Open
+Deepak,98,Open
+Ira,93,ST
+tanvi,90,BC
+Aditya,80,ST
+priya,72,SC
+Tanya,66,BC
 ----------------------------------------
-########## Testcase 2: Failed ##########
+########## Testcase 2: Passed ##########
 Expected Output: 
 divya,99,Open
 tanvi,90,Open
@@ -164,9 +172,9 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
-Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 2
-	at Solution.seatAlocation(Solution.java:156)
-	at Solution.main(Solution.java:131)
+divya,99,Open
+Aditya,80,ST
+priya,76,SC
 ----------------------------------------
 ########## Testcase 3: Failed ##########
 Expected Output: 
@@ -203,6 +211,7 @@ divya,99,Open
 tanvi,90,ST
 Aditya,80,Open
 Tanya,66,BC
+null
 null
 ----------------------------------------
 ########## Testcase 4: Failed ##########
@@ -290,6 +299,7 @@ Deepak,98,Open
 Ira,93,Open
 Raj,87,Open
 mahesh,87,Open
+null
 null
 null
 null
@@ -387,6 +397,7 @@ riya,83,Open
 priya,72,SC
 shyam,71,ST
 varsha,66,BC
+null
 null
 null
 null
