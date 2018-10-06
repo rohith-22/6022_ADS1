@@ -135,7 +135,7 @@ public final class Solution {
                                    final int totalVacancies, final int openVacancies,
                                    final int bcVacancies, final int scVacancies,
                                    final int stVacancies) {
-    StudentInformation[] meritList = new StudentInformation[totalVacancies];
+    StudentInformation[] meritList = new StudentInformation[totalVacancies-1];
     int openCatogery = openVacancies;
     int bcCatogery = bcVacancies;
     int scCatogery = scVacancies;
