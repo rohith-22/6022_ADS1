@@ -282,7 +282,7 @@ public final class Solution {
     int stCatogery = stVacancies;
     int size = 0;
     for (int i = 0; i < listOfStudents.length; i++) {
-      if (openCatogery != 0) {
+      if (openCatogery != 0 && listOfStudents[i].getCategory().equals("Open")) {
         meritList[size++] = listOfStudents[i];
         openCatogery--;
       }
@@ -302,9 +302,10 @@ public final class Solution {
         stCatogery--;
       }
     }
+    System.out.println(size);
     if (size <= meritList.length) {
       for (StudentInformation each : listOfStudents) {
-        for (int l = 0; l < size; l++) {
+        for (int l = 0; l < meritList.length; l++) {
           if (!each.getName().equals(meritList[l].getName())) {
             meritList[size++] = each;
             break;

@@ -55,8 +55,9 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
+6
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:309)
+	at Solution.seatAlocation(Solution.java:310)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
@@ -132,8 +133,9 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
+8
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
-	at Solution.seatAlocation(Solution.java:309)
+	at Solution.seatAlocation(Solution.java:310)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
@@ -164,8 +166,9 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
+3
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
-	at Solution.seatAlocation(Solution.java:309)
+	at Solution.seatAlocation(Solution.java:310)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
@@ -199,8 +202,9 @@ Priyanka,70,Open
 Tanya,66,BC
 Abhishek,60,BC
 
+5
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:309)
+	at Solution.seatAlocation(Solution.java:310)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
@@ -281,8 +285,9 @@ Aryan,32,Open
 shyam,23,Open
 Shreya,23,Open
 
+7
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Solution.seatAlocation(Solution.java:309)
+	at Solution.seatAlocation(Solution.java:310)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
@@ -365,7 +370,8 @@ Manoj,32,SC
 Aryan,32,ST
 Shreya,23,SC
 
+14
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 15
-	at Solution.seatAlocation(Solution.java:309)
+	at Solution.seatAlocation(Solution.java:310)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
