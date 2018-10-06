@@ -1,4 +1,4 @@
-########## Testcase 0: Failed ##########
+########## Testcase 0: Passed ##########
 Expected Output: 
 divya,99,ST
 Deepak,98,Open
@@ -55,11 +55,11 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
+divya,99,ST
 Deepak,98,Open
 Ira,93,ST
-riya,83,Open
-Ajay,76,Open
-Arjun,75,Open
+tanvi,90,BC
+Aditya,80,ST
 priya,72,SC
 ----------------------------------------
 ########## Testcase 1: Failed ##########
@@ -135,14 +135,14 @@ Anjali,38,SC
 Aryan,32,ST
 Shreya,23,SC
 
+divya,99,ST
 Ishita,99,Open
 Deepak,98,Open
 Ira,93,ST
 tanvi,90,BC
-mahesh,87,Open
-riya,83,Open
-Ajay,76,Open
+Aditya,80,ST
 priya,72,SC
+Tanya,66,BC
 ----------------------------------------
 ########## Testcase 2: Passed ##########
 Expected Output: 
@@ -208,10 +208,10 @@ Tanya,66,BC
 Abhishek,60,BC
 
 divya,99,Open
+tanvi,90,ST
 Aditya,80,Open
-priya,76,SC
-Ajay,76,Open
 Tanya,66,BC
+null
 null
 ----------------------------------------
 ########## Testcase 4: Failed ##########
@@ -386,6 +386,7 @@ Manoj,32,SC
 Aryan,32,ST
 Shreya,23,SC
 
+divya,99,ST
 Ishita,99,Open
 Deepak,99,Open
 Ira,93,ST
@@ -393,12 +394,11 @@ tanvi,90,BC
 Raj,87,BC
 mahesh,87,BC
 riya,83,Open
-Amit,76,Open
-Ajay,76,Open
-Arjun,75,Open
-rahul,73,Open
 priya,72,SC
-Priyanka,70,Open
+shyam,71,ST
 varsha,66,BC
+null
+null
+null
 null
 ----------------------------------------
