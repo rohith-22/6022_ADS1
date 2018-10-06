@@ -304,14 +304,16 @@ public final class Solution {
     }
     // System.out.println(size);
     // if () {
-      for (StudentInformation each : listOfStudents) {
-        for (StudentInformation eachStudent : meritList) {
-          if (!(each.getName().equals(eachStudent.getName()) && size <= meritList.length)) {
+    for (StudentInformation each : listOfStudents) {
+      for (StudentInformation eachStudent : meritList) {
+        if (!each.getName().equals(eachStudent.getName())) {
+          if (size <= meritList.length) {
             meritList[size++] = each;
             break;
           }
         }
       }
+    }
     // }
     for (int k = 0; k < meritList.length; k++) {
       System.out.println(meritList[k]);

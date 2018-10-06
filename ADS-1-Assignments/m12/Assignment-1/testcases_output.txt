@@ -56,7 +56,7 @@ Aryan,32,ST
 Shreya,23,SC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:310)
+	at Solution.seatAlocation(Solution.java:311)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 1: Failed ##########
@@ -133,7 +133,7 @@ Aryan,32,ST
 Shreya,23,SC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 8
-	at Solution.seatAlocation(Solution.java:310)
+	at Solution.seatAlocation(Solution.java:311)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 2: Failed ##########
@@ -165,7 +165,7 @@ Tanya,66,BC
 Abhishek,60,BC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 3
-	at Solution.seatAlocation(Solution.java:310)
+	at Solution.seatAlocation(Solution.java:311)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 3: Failed ##########
@@ -200,7 +200,7 @@ Tanya,66,BC
 Abhishek,60,BC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:310)
+	at Solution.seatAlocation(Solution.java:311)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
@@ -282,7 +282,7 @@ shyam,23,Open
 Shreya,23,Open
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Solution.seatAlocation(Solution.java:310)
+	at Solution.seatAlocation(Solution.java:311)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
@@ -366,6 +366,6 @@ Aryan,32,ST
 Shreya,23,SC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 15
-	at Solution.seatAlocation(Solution.java:310)
+	at Solution.seatAlocation(Solution.java:311)
 	at Solution.main(Solution.java:260)
 ----------------------------------------
