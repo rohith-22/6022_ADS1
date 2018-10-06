@@ -305,8 +305,8 @@ public final class Solution {
     // System.out.println(size);
     // if () {
       for (StudentInformation each : listOfStudents) {
-        for (int l = 0; l < meritList.length; l++) {
-          if (!each.getName().equals(meritList[l].getName()) && size <= meritList.length) {
+        for (StudentInformation eachStudent : meritList) {
+          if (!(each.getName().equals(eachStudent.getName()) && size <= meritList.length)) {
             meritList[size++] = each;
             break;
           }
