@@ -1,5 +1,6 @@
 Starting audit...
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m12/Assignment-1/Solution.java:60:41: Variable 'studentComparator' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m12/Assignment-1/Solution.java:142:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m12/Assignment-1/Solution.java:309: Line is longer than 80 characters (found 91). [LineLength]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 3 errors.
