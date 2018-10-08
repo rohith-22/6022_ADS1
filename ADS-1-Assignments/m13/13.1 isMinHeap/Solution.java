@@ -59,7 +59,7 @@ public final class Solution {
 			if (str.equals("")) {
 				System.out.println("false");
 			}
-			String[] stringArray = sc.next().split(",");
+			String[] stringArray = str.split(",");
 			switch (dataType) {
 			case "String":
 				MinHeap<String> object1Minheap = new MinHeap<String>(stringArray);
