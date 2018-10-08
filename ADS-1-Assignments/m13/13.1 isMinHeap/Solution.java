@@ -58,6 +58,7 @@ public final class Solution {
 			String str = sc.next();
 			if (str.equals("")) {
 				System.out.println("false");
+				break;
 			}
 			String[] stringArray = str.split(",");
 			switch (dataType) {
