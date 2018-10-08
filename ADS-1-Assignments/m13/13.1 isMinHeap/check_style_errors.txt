@@ -1,6 +1,2 @@
 Starting audit...
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:2:1: Redundant import from the java.lang package - java.lang.Comparable. [RedundantImport]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:2:8: Unused import - java.lang.Comparable. [UnusedImports]
 Audit done.
-Checkstyle ends with 3 errors.
