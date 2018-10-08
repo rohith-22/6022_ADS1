@@ -55,50 +55,44 @@ public final class Solution {
 		String dataType = sc.next();
 		int testCases = sc.nextInt();
 		for (int i = 0; i < testCases; i++) {
+			String str = sc.next();
+			if (str.equals("")) {
+				System.out.println("false");
+			}
+			String[] stringArray = sc.next().split(",");
 			switch (dataType) {
 			case "String":
-				String[] stringArray = sc.next().split(",");
 				MinHeap<String> object1Minheap = new MinHeap<String>(stringArray);
 				System.out.println(object1Minheap.isMinHeap());
 				break;
 			case "Integer":
-				String[] tokens1 = sc.nextLine().split(",");
-				Integer[] intArray = new Integer[tokens1.length];
-				for (int j = 0; j < tokens1.length; j++) {
-					intArray[j] = Integer.parseInt(tokens1[j]);
+				Integer[] intArray = new Integer[stringArray.length];
+				for (int j = 0; j < stringArray.length; j++) {
+					intArray[j] = Integer.parseInt(stringArray[j]);
 				}
 				IsMinHeap<Integer> object2Minheap
 				  = new IsMinHeap<Integer>(intArray);
 				System.out.println(object2Minheap.isMinHeap());
 				break;
 			case "Double":
-				String[] tokens2 = sc.nextLine().split(",");
-				Double[] doubleArray = new Double[tokens2.length];
-				for (int j = 0; j < tokens2.length; j++) {
-					doubleArray[j] = Double.parseDouble(tokens2[j]);
+				Double[] doubleArray = new Double[stringArray.length];
+				for (int j = 0; j < stringArray.length; j++) {
+					doubleArray[j] = Double.parseDouble(stringArray[j]);
 				}
 				IsMinHeap<Double> object3Minheap
 				  = new IsMinHeap<Double>(doubleArray);
 				System.out.println(object3Minheap.isMinHeap());
 				break;
 			case "Float":
-				String str = sc.nextLine();
-				if (str.equals("")) {
-					System.out.println("false");
-					break;
-				} else {
-					String[] tokens3 = str.split(",");
-					Float[] floatArray = new Float[tokens3.length];
-					for (int j = 0; j < tokens3.length; j++) {
-						floatArray[j] = Float.parseFloat(tokens3[j]);
-					}
-					IsMinHeap<Float> object4Minheap
-					  = new IsMinHeap<Float>(floatArray);
-					System.out.println(object4Minheap.isMinHeap());
+				Float[] floatArray = new Float[stringArray.length];
+				for (int j = 0; j < stringArray.length; j++) {
+					floatArray[j] = Float.parseFloat(stringArray[j]);
 				}
+				IsMinHeap<Float> object4Minheap
+				  = new IsMinHeap<Float>(floatArray);
+				System.out.println(object4Minheap.isMinHeap());
 				break;
 			default:
-				break;
 			}
 		}
 	}
