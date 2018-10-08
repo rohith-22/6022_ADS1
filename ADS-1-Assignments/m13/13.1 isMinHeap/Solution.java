@@ -56,7 +56,7 @@ public final class Solution {
 		int testCases = sc.nextInt();
 		for (int i = 0; i < testCases; i++) {
 			String str = sc.next();
-			if (str.equals("")) {
+			if (str.length()==0) {
 				System.out.println("false");
 				break;
 			}
