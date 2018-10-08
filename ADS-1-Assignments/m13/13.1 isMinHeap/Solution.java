@@ -55,7 +55,7 @@ public final class Solution {
 		String dataType = sc.next();
 		int testCases = sc.nextInt();
 		for (int i = 0; i < testCases; i++) {
-			String str = sc.next();
+			String str = sc.nextLine();
 			if (str.length()==0) {
 				System.out.println("false");
 				break;
