@@ -56,7 +56,7 @@ public final class Solution {
 		int testCases = Integer.parseInt(sc.nextLine());
 		for (int i = 0; i < testCases; i++) {
 			String str = sc.nextLine();
-			if (str.length()==0) {
+			if (str.length() == 0) {
 				System.out.println("false");
 				break;
 			}

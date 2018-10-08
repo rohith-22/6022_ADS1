@@ -5,14 +5,12 @@ Starting audit...
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:49: Missing a Javadoc comment. [JavadocType]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:50:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:53:9: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:61: Line is longer than 80 characters (found 98). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:66: Line is longer than 80 characters (found 81). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:68: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:76: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:78: Line is longer than 80 characters (found 88). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:91: Line is longer than 80 characters (found 87). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:92: Line is longer than 80 characters (found 82). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:93: Line is longer than 80 characters (found 93). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:97: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:66: Line is longer than 80 characters (found 98). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:70: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:72: Line is longer than 80 characters (found 87). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:79: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:81: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:88: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m13/13.1 isMinHeap/Solution.java:90: Line is longer than 80 characters (found 89). [LineLength]
 Audit done.
-Checkstyle ends with 15 errors.
+Checkstyle ends with 13 errors.
