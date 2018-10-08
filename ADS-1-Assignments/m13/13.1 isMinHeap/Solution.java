@@ -53,7 +53,7 @@ public final class Solution {
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String dataType = sc.nextLine();
-		int testCases = sc.nextInt();
+		int testCases = Integer.parseInt(sc.nextLine());
 		for (int i = 0; i < testCases; i++) {
 			String str = sc.nextLine();
 			if (str.length()==0) {
