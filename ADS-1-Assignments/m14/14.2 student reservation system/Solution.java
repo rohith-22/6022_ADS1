@@ -298,17 +298,17 @@ public final class Solution {
         openCatogery--;
       }
       if (listOfStudents[i].getCategory().equals("BC")
-          && bcCatogery != 0 &&  i > size) {
+          && bcCatogery != 0 &&  i >=size) {
         meritList[size++] = listOfStudents[i];
         bcCatogery--;
       }
       if (listOfStudents[i].getCategory().equals("SC")
-          && scCatogery != 0 &&  i > size) {
+          && scCatogery != 0 &&  i >= size) {
         meritList[size++] = listOfStudents[i];
         scCatogery--;
       }
       if (listOfStudents[i].getCategory().equals("ST")
-          && stCatogery != 0 &&  i > size) {
+          && stCatogery != 0 &&  i >= size) {
         meritList[size++] = listOfStudents[i];
         stCatogery--;
       }
