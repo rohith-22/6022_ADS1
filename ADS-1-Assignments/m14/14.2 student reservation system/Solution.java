@@ -293,7 +293,7 @@ public final class Solution {
     int stCatogery = stVacancies;
     int size = 0;
     for (int i = 0; i < listOfStudents.length; i++) {
-      if (openCatogery != 0) {
+      if (openCatogery != 0 && scCatogery != openCatogery) {
         meritList[size++] = listOfStudents[i];
         openCatogery--;
       }
