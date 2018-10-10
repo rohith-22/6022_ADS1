@@ -1,5 +1,9 @@
 import java.util.Scanner;
 import java.util.Comparator;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 /**
  * Class for student information.
  */
@@ -11,7 +15,8 @@ class StudentInformation {
   /**
    * date of birth.
    */
-  private String dateOfBirth;
+  // private String dateOfBirth;
+  private Date dateOfBirth;
   /**
    * subject marks one.
    */
@@ -45,15 +50,17 @@ class StudentInformation {
    */
   StudentInformation(final String name, final String dob,
                      final int marks1, final int marks2, final int marks3,
-                     final int total, final String reservation) {
+                     final int total, final String reservation) throws Exception {
     this.studentName = name;
-    this.dateOfBirth = dob;
+    // this.dateOfBirth = dob;
     this.subjectOne = marks1;
     this.subjectTwo = marks2;
     this.subjectThree = marks3;
     this.totalMarks = total;
     this.category = reservation;
+    dateOfBirth = new SimpleDateFormat("dd-MM-yyyy").parse(dob);
   }
+
   /**
    * comparator.
    */
@@ -238,16 +245,20 @@ public final class Solution {
     int bcVacancies = sc.nextInt();
     int scVacancies = sc.nextInt();
     int stVacancies = sc.nextInt();
-    for (int j = 0; j < studentsQualified; j++) {
-      String[] tokens = sc.next().split(",");
-      // System.out.println(Arrays.toString(tokens));
-      final int three = 3, four = 4, five = 5, six = 6;
-      objectList.addStudent(new StudentInformation(tokens[0], tokens[1],
-                            Integer.parseInt(tokens[2]),
-                            Integer.parseInt(tokens[three]),
-                            Integer.parseInt(tokens[four]),
-                            Integer.parseInt(tokens[five]),
-                            tokens[six]));
+    try {
+      for (int j = 0; j < studentsQualified; j++) {
+        String[] tokens = sc.next().split(",");
+        // System.out.println(Arrays.toString(tokens));
+        final int three = 3, four = 4, five = 5, six = 6;
+        objectList.addStudent(new StudentInformation(tokens[0], tokens[1],
+                              Integer.parseInt(tokens[2]),
+                              Integer.parseInt(tokens[three]),
+                              Integer.parseInt(tokens[four]),
+                              Integer.parseInt(tokens[five]),
+                              tokens[six]));
+      }
+    } catch (Exception e) {
+      System.out.println("");
     }
     StudentInformation[] listOfStudents = objectList.getList();
     Sort sortStudents = new Sort();
@@ -287,17 +298,17 @@ public final class Solution {
         openCatogery--;
       }
       if (listOfStudents[i].getCategory().equals("BC")
-          && bcCatogery != 0 &&  i > size) {
+          && bcCatogery != 0) {
         meritList[size++] = listOfStudents[i];
         bcCatogery--;
       }
       if (listOfStudents[i].getCategory().equals("SC")
-          && scCatogery != 0 &&  i > size) {
+          && scCatogery != 0 &&  i >= size) {
         meritList[size++] = listOfStudents[i];
         scCatogery--;
       }
       if (listOfStudents[i].getCategory().equals("ST")
-          && stCatogery != 0 &&  i > size) {
+          && stCatogery != 0 &&  i >= size) {
         meritList[size++] = listOfStudents[i];
         stCatogery--;
       }

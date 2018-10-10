@@ -140,9 +140,9 @@ Ishita,99,Open
 Deepak,98,Open
 Ira,93,ST
 tanvi,90,BC
+tanvi,90,BC
 Aditya,80,ST
 priya,72,SC
-Tanya,66,BC
 ----------------------------------------
 ########## Testcase 2: Passed ##########
 Expected Output: 
@@ -208,8 +208,8 @@ Tanya,66,BC
 Abhishek,60,BC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 6
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+	at Solution.seatAlocation(Solution.java:321)
+	at Solution.main(Solution.java:271)
 ----------------------------------------
 ########## Testcase 4: Failed ##########
 Expected Output: 
@@ -290,8 +290,8 @@ shyam,23,Open
 Shreya,23,Open
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 13
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+	at Solution.seatAlocation(Solution.java:321)
+	at Solution.main(Solution.java:271)
 ----------------------------------------
 ########## Testcase 5: Failed ##########
 Expected Output: 
@@ -343,16 +343,16 @@ priya,72,SC
 varsha,66,BC
 Your Output: 
 divya,99,ST
-Ishita,99,Open
 Deepak,99,Open
+Ishita,99,Open
 Ira,93,ST
 tanvi,90,BC
 Raj,87,BC
 mahesh,87,BC
 riya,83,Open
 Aditya,80,ST
-Amit,76,Open
 Ajay,76,Open
+Amit,76,Open
 Arjun,75,Open
 rahul,73,Open
 priya,72,SC
@@ -374,6 +374,6 @@ Aryan,32,ST
 Shreya,23,SC
 
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 15
-	at Solution.seatAlocation(Solution.java:310)
-	at Solution.main(Solution.java:260)
+	at Solution.seatAlocation(Solution.java:321)
+	at Solution.main(Solution.java:271)
 ----------------------------------------
