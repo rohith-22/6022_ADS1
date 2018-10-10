@@ -1,333 +1,426 @@
+import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Comparator;
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-
 /**
  * Class for student information.
  */
-class StudentInformation {
-  /**
-   * student name.
-   */
-  private String studentName;
-  /**
-   * date of birth.
-   */
-  // private String dateOfBirth;
-  private Date dateOfBirth;
-  /**
-   * subject marks one.
-   */
-  private int subjectOne;
-  /**
-     * subject marks two.
+class StudentInfo {
+    /**
+     * Name.
      */
-  private int subjectTwo;
-  /**
-     * subject marks three.
+    private String name;
+    /**
+     * DOB.
      */
-  private int subjectThree;
-  /**
-     * subject marks total.
+    private int[] dob;
+    /**
+     * Subject 1 Marks.
      */
-  private int totalMarks;
-  /**
-     * string category.
+    private int sub1;
+    /**
+     * Sub2 Marks.
      */
-  private String category;
-  /**
-   * Constructs the object.
-   *
-   * @param      name         The name
-   * @param      dob          The dob
-   * @param      marks1       The marks 1
-   * @param      marks2       The marks 2
-   * @param      marks3       The marks 3
-   * @param      total        The total
-   * @param      reservation  The reservation
-   */
-  StudentInformation(final String name, final String dob,
-                     final int marks1, final int marks2, final int marks3,
-                     final int total, final String reservation) throws Exception {
-    this.studentName = name;
-    // this.dateOfBirth = dob;
-    this.subjectOne = marks1;
-    this.subjectTwo = marks2;
-    this.subjectThree = marks3;
-    this.totalMarks = total;
-    this.category = reservation;
-    dateOfBirth = new SimpleDateFormat("dd-MM-yyyy").parse(dob);
-  }
+    private int sub2;
+    /**
+     * Sub3 Marks.
+     */
+    private int sub3;
+    /**
+     * Total Marks.
+     */
+    private int tmarks;
+    /**
+     * Category.
+     */
+    private String category;
+    /**
+     * No.of Days.
+     */
+    private static final int DAYS = 30;
 
-  /**
-   * comparator.
-   */
-  static Comparator<StudentInformation> studentComparator =
-  new Comparator<StudentInformation>() {
-    public int compare(final StudentInformation student1,
-                       final StudentInformation student2) {
-      if (student1.totalMarks - student2.totalMarks != 0) {
-        return student1.totalMarks - student2.totalMarks;
-      }
-      if (student1.subjectThree - student2.subjectThree != 0) {
-        return student1.subjectThree - student2.subjectThree;
-      }
-      if (student1.subjectTwo - student2.subjectTwo != 0) {
-        return student1.subjectTwo - student2.subjectTwo;
-      }
-      return student1.dateOfBirth.compareTo(student2.dateOfBirth);
-    }
-  };
-  /**
-   * Gets the category.
-   *
-   * @return     The category.
-   */
-  public String getCategory() {
-    return this.category;
-  }
-  /**
-   * Gets the name.
-   *
-   * @return     The name.
-   */
-  public String getName() {
-    return this.studentName;
-  }
-  /**
-   * Returns a string representation of the object.
-   *
-   * @return     String representation of the object.
-   */
-  public String toString() {
-    return this.studentName + "," + this.totalMarks + "," + this.category;
-  }
-}
-/**
- * List of students.
- */
-class StudentList {
-  /**
-   * array of list.
-   */
-  private StudentInformation[] list;
-  /**
-   * size variable.
-   */
-  private int size;
-  /**
-   * Constructs the object.
-   *
-   * @param      qualifiedStudents  The qualified students
-   */
-  StudentList(final int qualifiedStudents) {
-    list = new StudentInformation[qualifiedStudents];
-    size = 0;
-  }
-  /**
-   * Adds a student.
-   *
-   * @param      object  The object
-   */
-  public void addStudent(final StudentInformation object) {
-    list[size++] = object;
-  }
-  /**
-   * Gets the list.
-   *
-   * @return     The list.
-   */
-  public StudentInformation[] getList() {
-    return list;
-  }
-}
-/**
- * Class for sort.
- */
-class Sort {
-  /**
-   * Constructs the object.
-   */
-  Sort() {
-
-
-  }
-  /**
-   * insertion sorting.
-   *
-   * @param      studentList  The student list
-   * @param      comparator   The comparator
-   */
-  public static void sort(final Object[] studentList,
-                          final Comparator comparator) {
-    int n = studentList.length;
-    for (int i = 0; i < n; i++) {
-      int min = i;
-      for (int j = i + 1; j < n; j++) {
-        if (less(comparator, studentList[j], studentList[min])) {
-          min = j;
+    /**
+     * Constructs the object.
+     *
+     * @param      n         Name
+     * @param      b         Date of Birth
+     * @param      s1        The s 1
+     * @param      s2        The s 2
+     * @param      s3        The s 3
+     * @param      totmarks  The totmarks
+     * @param      cat       The cat
+     */
+    StudentInfo(final String n, final String b, final int s1,
+                final int s2, final int s3, final int totmarks,
+                final String cat) {
+        name = n;
+        String[] dupdob = b.split("-");
+        dob = new int[dupdob.length];
+        for (int i = 0; i < dupdob.length; i++) {
+            dob[i] = Integer.parseInt(dupdob[i]);
         }
-      }
-      exch(studentList, i, min);
+        sub1 = s1;
+        sub2 = s2;
+        sub3 = s3;
+        tmarks = totmarks;
+        category = cat;
     }
-  }
-  /**
-   * compares the objecst.
-   *
-   * @param      comparator  The comparator
-   * @param      v           object
-   * @param      w           object
-   *
-   * @return     boolean
-   */
-  private static boolean less(final Comparator comparator,
-                              final Object v, final Object w) {
-    return comparator.compare(v, w) < 0;
-  }
-  /**
-   * excahnge functin exchanges the two elements.
-   *
-   * @param      studentList  The student list
-   * @param      i            object
-   * @param      j            object
-   */
-  private static void exch(final Object[] studentList,
-                           final int i, final int j) {
-    Object swap = studentList[i];
-    studentList[i] = studentList[j];
-    studentList[j] = swap;
-  }
-  /**
-   * gives decending order of array.
-   *
-   * @param      arr    The arr
-   * @param      strt  The start
-   * @param      eend    The end
-   */
-  public static void decendingOrder(final StudentInformation[] arr,
-                                    final int strt, final int eend) {
-    StudentInformation temp;
-    int start = strt;
-    int end = eend;
-    while (start < end) {
-      temp = arr[start];
-      arr[start] = arr[end];
-      arr[end] = temp;
-      start++;
-      end--;
+
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
+    public String getName() {
+        return name;
     }
-  }
+
+    /**
+     * Gets the marks.
+     *
+     * @return     The marks.
+     */
+    public int getMarks() {
+        return tmarks;
+    }
+
+    /**
+     * Gets the category.
+     *
+     * @return     The category.
+     */
+    public String getCategory() {
+        return category;
+    }
+
+    /**
+     * Comparator.
+     */
+    static Comparator<StudentInfo> comp = new Comparator<StudentInfo>() {
+        public int compare(final StudentInfo s1, final StudentInfo s2) {
+            if (s2.tmarks - s1.tmarks != 0) {
+                return s2.tmarks - s1.tmarks;
+            } else if (s2.sub3 - s1.sub3 != 0) {
+                return s2.sub3 - s1.sub3;
+            } else if (s2.sub2 - s1.sub2 != 0) {
+                return s2.sub2 - s1.sub2;
+            } else {
+                if (s2.dob[2] - s1.dob[2] != 0) {
+                    return s2.dob[2] - s1.dob[2];
+                } else {
+                    int count = 2 * 2 * (2 + 1);
+                    return (((count - s1.dob[1]) * DAYS)
+                            - ((count - s2.dob[1]) * DAYS));
+                }
+            }
+        }
+    };
 
 }
 /**
- * main solution.
+ * Class for students.
+ */
+class Students {
+    /**
+     * StudentInfo Object Array .
+     */
+    private StudentInfo[] info;
+    /**
+     * num Variable .
+     */
+    private int num;
+    /**
+     * size of StudentInfo Array .
+     */
+    private int size;
+    /**
+     * Constructs the object.
+     *
+     * @param      data   The data
+     */
+    Students(final int data) {
+        num = data;
+        info = new StudentInfo[num];
+        size = 0;
+    }
+    /**
+     * Add Object to Object Array .
+     *
+     * @param      stud  The stud
+     */
+    public void add(final StudentInfo stud) {
+        if (size == info.length) {
+            resize();
+        }
+        info[size++] = stud;
+    }
+
+    /**
+     * Resizing the Array .
+     */
+    public void resize() {
+        info = Arrays.copyOf(info, info.length * 2);
+    }
+
+    /**
+     * Gets the information.
+     *
+     * @return     The information.
+     */
+    public StudentInfo[] getInfo() {
+        return info;
+    }
+}
+
+
+/**
+ * Class for category criteria.
+ */
+class CategoryCriteria {
+    /**
+     * Constructs the object.
+     */
+    private CategoryCriteria() {
+        //Unused.
+    }
+    /**
+     * Object for Insertion Class .
+     */
+    private Insertion mergee = new Insertion();
+    /**
+     * No.of applied .
+     */
+    private int applied;
+    /**
+     * No.of Vacancies .
+     */
+    private int vacancies;
+    /**
+     * No.of Unrevacancies .
+     */
+    private int urevacancies;
+    /**
+     * No.of BC Vacancies .
+     */
+    private int bcvac;
+    /**
+     * No.of SC Vacancies .
+     */
+    private int scvac;
+    /**
+     * No.of ST Vacancies .
+     */
+    private int stvac;
+    /**
+     * Size of the Array .
+     */
+    private int asize;
+    /**
+     * Duplicate array for Sorted Objects .
+     */
+    private StudentInfo[] dupSorted;
+    /**
+     * size of the Object Array .
+     */
+    private int size;
+    /**
+     * Array to store objects according category .
+     */
+    private StudentInfo[] catSorted;
+    /**
+     * Constructs the object.
+     *
+     * @param      app     The application
+     * @param      vac     The vac
+     * @param      urev    The urev
+     * @param      bv      BC Vacancies }
+     * @param      sv      SC Vacancies }
+     * @param      stv     The stv
+     * @param      sorted  The sorted
+     */
+    CategoryCriteria(final int app, final int vac, final int urev,
+                     final int bv, final int sv, final int stv,
+                     final StudentInfo[] sorted) {
+        applied = app;
+        vacancies = vac;
+        urevacancies = urev;
+        bcvac = bv;
+        scvac = sv;
+        stvac = stv;
+        dupSorted = sorted;
+        asize = 0;
+        size = sorted.length;
+        catSorted = new StudentInfo[vacancies];
+
+    }
+
+    /**
+     * Checks whether the Object contained in Array .
+     *
+     * @param      student  The student
+     *
+     * @return     Returns true id=f contains else false }
+     */
+    private boolean contains(final StudentInfo student) {
+        for (int i = 0; i < asize; i++) {
+            if (catSorted[i].getName().equals(student.getName())) {
+                // System.out.println(catSorted[i].getName());
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * Categorising According to Criteria .
+     */
+    public void catCriteria() {
+        for (int i = 0; i < urevacancies; i++) {
+            catSorted[asize++] = dupSorted[i];
+        }
+
+        for (int i = 0; i < dupSorted.length; i++) {
+            if (!contains(dupSorted[i])) {
+                if (dupSorted[i].getCategory().equals("BC") && bcvac > 0) {
+                    catSorted[asize++] = dupSorted[i];
+                    bcvac--;
+                } else if (dupSorted[i].getCategory().equals("SC")
+                           && scvac > 0) {
+                    catSorted[asize++] = dupSorted[i];
+                    scvac--;
+                } else if (dupSorted[i].getCategory().equals("ST")
+                           && stvac > 0) {
+                    catSorted[asize++] = dupSorted[i];
+                    stvac--;
+                }
+            }
+        }
+
+        for (int i = 0; i < dupSorted.length; i++) {
+            if (!contains(dupSorted[i])) {
+                if (bcvac-- > 0) {
+                    catSorted[asize++] = dupSorted[i];
+                } else if (scvac-- > 0) {
+                    catSorted[asize++] = dupSorted[i];
+                } else if (stvac-- > 0) {
+                    catSorted[asize++] = dupSorted[i];
+                }
+            }
+        }
+        mergee.insertionSort(
+            catSorted, 0, catSorted.length - 1, StudentInfo.comp);
+        mergee.print(catSorted);
+    }
+}
+
+/**
+ * Class for Insertion.
+ */
+class Insertion {
+    /**
+     * Constructs the object.
+     */
+    Insertion() {
+    }
+
+    /**
+     * Insertion Sort .
+     * Worst Case Complexity is O(N^2).
+     * It Iterates through out the array two times due to nested for loop.
+     *
+     * @param      a           Object Array }
+     * @param      lo          The lower
+     * @param      hi          The higher
+     * @param      comparator  The comparator
+     */
+    public void insertionSort(final StudentInfo[] a, final int lo,
+                              final int hi, final Comparator comparator) {
+        for (int i = lo; i <= hi; i++) {
+            for (int j = i; j > lo && less(a[j], a[j - 1], comparator); j--) {
+                exch(a, j, j - 1);
+            }
+        }
+    }
+
+    /**
+     * Swapping Elements in the Array .
+     *
+     * @param      a     Student Item }
+     * @param      i     index i }
+     * @param      j     index j }
+     */
+    private  void exch(final StudentInfo[] a, final int i,
+                       final int j) {
+        StudentInfo swap = a[i];
+        a[i] = a[j];
+        a[j] = swap;
+    }
+
+    /**
+     * Less method .
+     *
+     * @param      a     Student Item 1 }
+     * @param      b     Student Item 2 }
+     * @param      comp  The component
+     *
+     * @return     Returns boolean }
+     */
+    private boolean less(final StudentInfo a, final StudentInfo b,
+                         final Comparator comp) {
+        return comp.compare(a, b) < 0;
+    }
+    /**.
+     * Print to print the Output }
+     *
+     * @param      items  The items
+     */
+    public void print(final StudentInfo[] items) {
+        for (int i = 0; i < items.length; i++) {
+            System.out.println(items[i].getName() + ","
+                               + items[i].getMarks() + ","
+                               + items[i].getCategory());
+        }
+    }
+}
+/**
+ * Class for solution.
  */
 public final class Solution {
-  /**
-   * Constructs the object.
-   */
-  private Solution() {
-
-  }
-  /**
-   * main sfuntion to handlse inpuit and output.
-   *
-   * @param      args  The arguments
-   */
-  public static void main(final String[] args) {
-    Scanner sc = new Scanner(System.in);
-    int studentsQualified = sc.nextInt();
-    StudentList objectList = new StudentList(studentsQualified);
-    int totalVacancies = sc.nextInt();
-    int openVacancies = sc.nextInt();
-    int bcVacancies = sc.nextInt();
-    int scVacancies = sc.nextInt();
-    int stVacancies = sc.nextInt();
-    try {
-      for (int j = 0; j < studentsQualified; j++) {
-        String[] tokens = sc.next().split(",");
-        // System.out.println(Arrays.toString(tokens));
-        final int three = 3, four = 4, five = 5, six = 6;
-        objectList.addStudent(new StudentInformation(tokens[0], tokens[1],
-                              Integer.parseInt(tokens[2]),
-                              Integer.parseInt(tokens[three]),
-                              Integer.parseInt(tokens[four]),
-                              Integer.parseInt(tokens[five]),
-                              tokens[six]));
-      }
-    } catch (Exception e) {
-      System.out.println("");
+    /**
+     * Constructor .
+     */
+    private Solution() {
     }
-    StudentInformation[] listOfStudents = objectList.getList();
-    Sort sortStudents = new Sort();
-    sortStudents.sort(listOfStudents, StudentInformation.studentComparator);
-    sortStudents.decendingOrder(listOfStudents, 0, listOfStudents.length - 1);
-    for (int i = 0; i < listOfStudents.length; i++) {
-      System.out.println(listOfStudents[i]);
+    /**
+     * main Method.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int studcount = Integer.parseInt(scan.nextLine());
+        Insertion sort = new Insertion();
+        int vacancies = Integer.parseInt(scan.nextLine());
+        int unrevacancies = Integer.parseInt(scan.nextLine());
+        int bcvacancies = Integer.parseInt(scan.nextLine());
+        int scvacancies = Integer.parseInt(scan.nextLine());
+        int stvacancies = Integer.parseInt(scan.nextLine());
+        Students stobj = new Students(studcount);
+        String[] sinfo = null;
+        for (int i = 0; i < studcount; i++) {
+            sinfo = scan.nextLine().split(",");
+            stobj.add(new StudentInfo(sinfo[0], sinfo[1],
+                                      Integer.parseInt(sinfo[2]),
+                                      Integer.parseInt(sinfo[2 + 1]),
+                                      Integer.parseInt(sinfo[2 + 2]),
+                                      Integer.parseInt(sinfo[2 + 2 + 1]),
+                                      (sinfo[2 + 2 + 2])));
+        }
+        StudentInfo[] stinfo = stobj.getInfo();
+        sort.insertionSort(stinfo, 0, stinfo.length - 1, StudentInfo.comp);
+        sort.print(stinfo);
+        System.out.println();
+        CategoryCriteria ccobj = new CategoryCriteria(
+            studcount, vacancies, unrevacancies, bcvacancies,
+            scvacancies, stvacancies, stinfo);
+        ccobj.catCriteria();
     }
-    System.out.println();
-    seatAlocation(listOfStudents, totalVacancies,
-                  openVacancies, bcVacancies, scVacancies, stVacancies);
-  }
-  /**
-   * seat alocation to alocate seates.
-   *
-   * @param      listOfStudents  The list of students
-   * @param      totalVacancies  The total vacancies
-   * @param      openVacancies   The open vacancies
-   * @param      bcVacancies     The bc vacancies
-   * @param      scVacancies     The screen vacancies
-   * @param      stVacancies     The st vacancies
-   */
-  public static void seatAlocation(final StudentInformation[] listOfStudents,
-                                   final int totalVacancies,
-                                   final int openVacancies,
-                                   final int bcVacancies, final int scVacancies,
-                                   final int stVacancies) {
-    StudentInformation[] meritList = new StudentInformation[totalVacancies];
-    int openCatogery = openVacancies;
-    int bcCatogery = bcVacancies;
-    int scCatogery = scVacancies;
-    int stCatogery = stVacancies;
-    int size = 0;
-    for (int i = 0; i < listOfStudents.length; i++) {
-      if (openCatogery != 0 && scCatogery != openCatogery) {
-        meritList[size++] = listOfStudents[i];
-        openCatogery--;
-      }
-      if (listOfStudents[i].getCategory().equals("BC")
-          && bcCatogery != 0 &&  i >=size) {
-        meritList[size++] = listOfStudents[i];
-        bcCatogery--;
-      }
-      if (listOfStudents[i].getCategory().equals("SC")
-          && scCatogery != 0 &&  i >= size) {
-        meritList[size++] = listOfStudents[i];
-        scCatogery--;
-      }
-      if (listOfStudents[i].getCategory().equals("ST")
-          && stCatogery != 0 &&  i >= size) {
-        meritList[size++] = listOfStudents[i];
-        stCatogery--;
-      }
-    }
-    // if (size < meritList.length) {
-    //   for (StudentInformation each : listOfStudents) {
-    //     for (StudentInformation eachStudent : meritList) {
-    //       if (!each.getName().equals(eachStudent.getName())) {
-    //         if (size <= meritList.length) {
-    //           meritList[size++] = each;
-    //           break;
-    //         }
-    //       }
-    //     }
-    //   }
-    // }
-    for (int k = 0; k < meritList.length; k++) {
-      System.out.println(meritList[k]);
-    }
-
-  }
 }
