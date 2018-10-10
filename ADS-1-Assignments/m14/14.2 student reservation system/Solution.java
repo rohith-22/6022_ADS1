@@ -118,8 +118,8 @@ class CategoryCriteria {
      * @param      app     The application
      * @param      vac     The vac
      * @param      urev    The urev
-     * @param      bv      BC Vacancies 
-     * @param      sv      SC Vacancies 
+     * @param      bv      BC Vacancies
+     * @param      sv      SC Vacancies
      * @param      stv     The stv
      * @param      sorted  The sorted
      */
@@ -144,7 +144,7 @@ class CategoryCriteria {
      *
      * @param      student  The student
      *
-     * @return     Returns true id=f contains else false 
+     * @return     Returns true id=f contains else false
      */
     private boolean contains(final StudentInfo student) {
         for (int i = 0; i < asize; i++) {
