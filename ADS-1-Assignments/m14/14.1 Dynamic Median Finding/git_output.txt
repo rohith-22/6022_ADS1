@@ -1,0 +1,33 @@
+[master c7ea302] "ads1_m14_a1: 4/4 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
+ 31 files changed, 804802 insertions(+)
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MaxPQ$HeapIterator.class
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MaxPQ.class
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MaxPQ.java
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MedianFinding.class
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MinPQ$HeapIterator.class
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MinPQ.class
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/MinPQ.java
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/Solution.class
+ create mode 100755 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/Solution.java
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/check_style_errors.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/git_output.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/input000.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/input001.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/input002.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/input003.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/output000.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/output001.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/output002.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/output003.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/md5/problem_id.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/readme.docx
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/input000.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/input001.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/input002.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/input003.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/output000.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/output001.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/output002.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/output003.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases/problem_id.txt
+ create mode 100644 ADS-1-Assignments/m14/14.1 Dynamic Median Finding/testcases_output.txt
