@@ -69,7 +69,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * Constructs the object.
      *
-     * @param      key   The key
+     * @param      key1   The key
      * @param      val   The value
      */
     Node(final Key key1, final Value val) {
