@@ -28,6 +28,13 @@ class Books implements Comparable<Books> {
     authorOfBook = author;
     priceOfBook = price;
   }
+  /**
+   * compares the two book objects using name.
+   *
+   * @param      obj   The object
+   *
+   * @return     returns int
+   */
   public int compareTo(final Books obj) {
     return nameOfBook.compareTo(obj.nameOfBook);
   }
@@ -65,8 +72,8 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @param      key   The key
      * @param      val   The value
      */
-    public Node(final Key key, final Value val) {
-      this.key = key;
+    Node(final Key key1, final Value val) {
+      this.key = key1;
       this.value = val;
 
     }
@@ -147,13 +154,19 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
  */
 public final class Solution {
   /**
+   * unused constructor.
+   */
+  private Solution() {
+
+  }
+  /**
    * main funciton to handle input and output testcases.
    *
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
     Scanner sc = new Scanner(System.in);
-    BinarySearchTree <Books, Integer> object = new BinarySearchTree<>();
+    BinarySearchTree<Books, Integer> object = new BinarySearchTree<>();
     final int three = 3, four = 4;
     while (sc.hasNext()) {
       String[] tokens = sc.nextLine().split(",");
