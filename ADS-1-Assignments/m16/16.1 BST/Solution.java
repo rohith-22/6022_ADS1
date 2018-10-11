@@ -1,5 +1,5 @@
 import java.util.*;
-class Books implements Comparable<Books>{
+class Books implements Comparable<Books> {
 	private String authorOfBook;
 	private String nameOfBook;
 	private String price;
@@ -33,7 +33,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
 		}
 		root = put(root, key, value);
 	}
-	
+
 	public Node put(final Node node, final Key key,
 	                final Value value) {
 		if (node == null) {
@@ -49,11 +49,11 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
 		}
 		return node;
 	}
-	
+
 	public Value get(final Key key) {
 		return get(root, key);
 	}
-	
+
 	private Value get(final Node node, final Key key) {
 		if (node == null) {
 			return null;
@@ -80,7 +80,7 @@ public final class Solution {
 				object.put(new Books(tokens[1], tokens[2], tokens[three]), Integer.parseInt(tokens[four]));
 				break;
 			case "get":
-				object.get(new Books(tokens[1], tokens[2], tokens[three]));
+				System.out.println(object.get(new Books(tokens[1], tokens[2], tokens[three])));
 				break;
 			default:
 			}
