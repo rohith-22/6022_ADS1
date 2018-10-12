@@ -56,7 +56,7 @@ final class Solution {
         int counter = 0;
         final int limit = 600;
         int nthNumber = Integer.parseInt(tokens[0]);
-        int combinations = Integer.parseInt(tokens[0]);
+        int combinations = Integer.parseInt(tokens[1]);
         int tempSum = -1;
 
         MinPQ<CubeSum> pq = new MinPQ<CubeSum>();
