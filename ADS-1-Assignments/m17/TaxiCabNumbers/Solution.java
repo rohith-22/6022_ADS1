@@ -53,7 +53,7 @@ class CubeSum implements Comparable<CubeSum> {
   }
   /**
    * compaers the sum of both objects.
-   *
+   *Time complexity is O(1)
    * @param      other  The other
    *
    * @return     int
@@ -92,7 +92,8 @@ final class Solution {
   }
   /**
    * main function to handle testcases.
-   *
+   *Time complexity of main function is O(2N) because we
+   *used one for loop and a while loop.
    * @param      args  The arguments
    */
   public static void main(final String[] args) {
