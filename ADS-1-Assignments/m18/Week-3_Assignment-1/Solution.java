@@ -89,10 +89,7 @@ public final class Solution {
                                          Double.parseDouble(tokens[1])));
 
     }
-    for (int i = 0; i < five; i++) {
-      System.out.println(maxPqObj1.delMax());
-    }
-    System.out.println();
+    printObjectMin(minPqObj1);
     for (int i = 0; i < five; i++) {
       System.out.println(minPqObj1.delMin());
     }
@@ -111,11 +108,7 @@ public final class Solution {
       maxPqObj2.insert(new StockExchange(tokens[0],
                                          Double.parseDouble(tokens[1])));
     }
-
-    for (int i = 0; i < five; i++) {
-      System.out.println(maxPqObj2.delMax());
-    }
-    System.out.println();
+    printObjectMin(minPqObj2);
     for (int i = 0; i < five; i++) {
       System.out.println(minPqObj2.delMin());
     }
@@ -201,5 +194,12 @@ public final class Solution {
     }
     System.out.println();
 
+  }
+  public static void printObjectMin(MinPQ<StockExchange> object) {
+    final int five = 5;
+    for (int i = 0; i < five; i++) {
+      System.out.println(object.delMin());
+    }
+    System.out.println();
   }
 }
