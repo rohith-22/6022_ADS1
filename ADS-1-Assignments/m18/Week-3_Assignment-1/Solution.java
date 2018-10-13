@@ -10,7 +10,7 @@ class StockExchange implements Comparable<StockExchange> {
    */
   private String nameOfCompany;
   /**
-   * variable percentage;
+   * variable percentage.
    */
   private Double percentChange;
   /**
@@ -71,7 +71,7 @@ public final class Solution {
    *
    * @param      args  The arguments
    */
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
     Scanner sc = new Scanner(System.in);
 
     int numberOfInputs = Integer.parseInt(sc.nextLine());
@@ -79,8 +79,8 @@ public final class Solution {
     /**
      * 9 o clock
      */
-    MinPQ<StockExchange>minPqObj1 = new MinPQ<>();
-    MaxPQ<StockExchange>maxPqObj1 = new MaxPQ<>();
+    MinPQ<StockExchange> minPqObj1 = new MinPQ<>();
+    MaxPQ<StockExchange> maxPqObj1 = new MaxPQ<>();
     for (int j = 0; j < numberOfInputs; j++) {
       String[] tokens = sc.nextLine().split(",");
       minPqObj1.insert(new StockExchange(tokens[0],
@@ -98,8 +98,8 @@ public final class Solution {
     }
     System.out.println();
 
-    MinPQ<StockExchange>minPqObj2 = new MinPQ<>();
-    MaxPQ<StockExchange>maxPqObj2 = new MaxPQ<>();
+    MinPQ<StockExchange> minPqObj2 = new MinPQ<>();
+    MaxPQ<StockExchange> maxPqObj2 = new MaxPQ<>();
 
     /**
      * 10 o clock
@@ -123,8 +123,8 @@ public final class Solution {
     /**
      * 11 o clock
      */
-    MinPQ<StockExchange>minPqObj3 = new MinPQ<>();
-    MaxPQ<StockExchange>maxPqObj3 = new MaxPQ<>();
+    MinPQ<StockExchange> minPqObj3 = new MinPQ<>();
+    MaxPQ<StockExchange> maxPqObj3 = new MaxPQ<>();
     for (int j = 0; j < numberOfInputs; j++) {
       String[] tokens = sc.nextLine().split(",");
       minPqObj3.insert(new StockExchange(tokens[0],
@@ -143,8 +143,8 @@ public final class Solution {
     /**
      * 12 o clock
      */
-    MinPQ<StockExchange>minPqObj4 = new MinPQ<>();
-    MaxPQ<StockExchange>maxPqObj4 = new MaxPQ<>();
+    MinPQ<StockExchange> minPqObj4 = new MinPQ<>();
+    MaxPQ<StockExchange> maxPqObj4 = new MaxPQ<>();
     for (int j = 0; j < numberOfInputs; j++) {
       String[] tokens = sc.nextLine().split(",");
       minPqObj4.insert(new StockExchange(tokens[0],
@@ -163,8 +163,8 @@ public final class Solution {
     /**
          * 13 o clock
          */
-    MinPQ<StockExchange>minPqObj5 = new MinPQ<>();
-    MaxPQ<StockExchange>maxPqObj5 = new MaxPQ<>();
+    MinPQ<StockExchange> minPqObj5 = new MinPQ<>();
+    MaxPQ<StockExchange> maxPqObj5 = new MaxPQ<>();
     for (int j = 0; j < numberOfInputs; j++) {
       String[] tokens = sc.nextLine().split(",");
       minPqObj5.insert(new StockExchange(tokens[0],
@@ -183,8 +183,8 @@ public final class Solution {
     /**
      * 14 o clock
      */
-    MinPQ<StockExchange>minPqObj6 = new MinPQ<>();
-    MaxPQ<StockExchange>maxPqObj6 = new MaxPQ<>();
+    MinPQ<StockExchange> minPqObj6 = new MinPQ<>();
+    MaxPQ<StockExchange> maxPqObj6 = new MaxPQ<>();
     for (int j = 0; j < numberOfInputs; j++) {
       String[] tokens = sc.nextLine().split(",");
       minPqObj6.insert(new StockExchange(tokens[0],
