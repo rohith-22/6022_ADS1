@@ -24,7 +24,7 @@ class StockExchange implements Comparable<StockExchange> {
     percentChange = percentage;
   }
   /**
-   * compare to method
+   * compare to method.
    *
    * @param      that  The that
    *
@@ -203,4 +203,3 @@ public final class Solution {
 
   }
 }
-
