@@ -1,4 +1,0 @@
-[master 7d2d466] "ads1_week3_exam: 2/5 testcases passed. Cannot run hidden testcases as Server is unreachablecheck_style score: 0/1 "
- 1 file changed, 1 insertion(+), 1 deletion(-)
- rewrite ADS-1-Assignments/m18/Week-3_Assignment-1/result/score.json (74%)
-fatal: unable to access 'https://github.com/rohith-22/6022_ADS1.git/': Could not resolve proxy: proxy.msitprogram.net
