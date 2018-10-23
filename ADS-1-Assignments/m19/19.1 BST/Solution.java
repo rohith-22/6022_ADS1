@@ -76,14 +76,19 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      */
     private Node left, right;
     /**
+     * varibale size.
+     */
+    private int size;
+    /**
      * Constructs the object.
      *
      * @param      key1   The key
      * @param      val   The value
      */
-    Node(final Key key1, final Value val) {
+    Node(final Key key1, final Value val, final int sizeOne) {
       this.key = key1;
       this.value = val;
+      this.size = sizeOne;
 
     }
 
@@ -105,7 +110,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
   public Node put(final Node node, final Key key,
                   final Value value) {
     if (node == null) {
-      return new Node(key, value);
+      return new Node(key, value, 1);
     }
     int cmp = key.compareTo(node.key);
     if (cmp < 0) {
@@ -115,6 +120,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     } else {
       node.value = value;
     }
+    node.size = 1 + size(node.left) + size(node.right);
     return node;
   }
 
@@ -183,6 +189,36 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     return ceiling(x.right, key);
   }
+  public Key select(final int k) {
+    Node node = select(root, k);
+    return node.key;
+  }
+
+  public int size() {
+    return size(root);
+  }
+
+  private int size(final Node node) {
+    if (node == null) {
+      return 0;
+    } else {
+      return node.size;
+    }
+  }
+  private Node select(final Node node, final int k) {
+    if (node == null) {
+      return null;
+    }
+    int t = size(node.left);
+    if      (t > k) {
+      return select(node.left,  k);
+    } else if (t < k) {
+      return select(node.right, k - t - 1);
+    } else {
+      return node;
+    }
+  }
+
 
 }
 
@@ -209,12 +245,12 @@ public class Solution {
       switch (tokens[0]) {
       case "put":
         objectBST.put(new Books(tokens[1], tokens[2],
-                                tokens[2 + 1]), Integer.parseInt(tokens[2 + 2]));
+                                tokens[2 + 1]),
+                      Integer.parseInt(tokens[2 + 2]));
         break;
       case "get":
         System.out.println(objectBST.get(new Books(
                                            tokens[1], tokens[2],
-
                                            tokens[2 + 1])));
         break;
       case "max":
@@ -226,15 +262,15 @@ public class Solution {
       case "floor":
         System.out.println(objectBST.floor(
                              new Books(tokens[1], tokens[2],
-
                                        tokens[2 + 1])));
         break;
       case "ceiling":
         System.out.println(objectBST.ceiling(
                              new Books(tokens[1], tokens[2],
-
                                        tokens[2 + 1])));
         break;
+      case "select":
+        System.out.println(objectBST.select(Integer.parseInt(tokens[1])));
       default:
         break;
       }
