@@ -38,6 +38,15 @@ class Books implements Comparable<Books> {
   public int compareTo(final Books obj) {
     return nameOfBook.compareTo(obj.nameOfBook);
   }
+  /**.
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+  public String toString() {
+    return this.nameOfBook + ", " + this.authorOfBook + ", "
+           + this.priceOfBook;
+  }
 }
 /**
  * Class for binary search tree.
@@ -77,6 +86,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
       this.value = val;
 
     }
+
   }
   /**
    * Constructs the object.
