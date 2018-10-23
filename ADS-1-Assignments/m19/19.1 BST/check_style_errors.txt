@@ -1,17 +1,6 @@
 Starting audit...
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:88:53: Expected @param tag for 'sizeOne'. [JavadocMethod]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:196:20: Parameter x should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:221:20: Parameter x should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:238:20: Parameter key should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:242: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:254:22: Parameter x should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:254:27: Expected @param tag for 'x'. [JavadocMethod]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:254:30: Parameter key should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:262: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:281:22: Parameter key should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:283: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:284: 'else' construct must use '{}'s. [NeedBraces]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:298:24: Parameter x should be final. [FinalParameters]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:298:32: Parameter key should be final. [FinalParameters]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:252:8: Unused @param tag for 'node'. [JavadocMethod]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m19/19.1 BST/Solution.java:258:33: Expected @param tag for 'x'. [JavadocMethod]
 Audit done.
-Checkstyle ends with 14 errors.
+Checkstyle ends with 3 errors.

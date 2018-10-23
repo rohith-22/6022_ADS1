@@ -193,7 +193,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *
      * @return     returns minimum book details in the tree
      */
-  private Node min(Node x) {
+  private Node min(final Node x) {
     if (x.left == null) {
       return x;
     } else {
@@ -218,7 +218,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *
      * @return     eturns maximum element in the tree
      */
-  private Node max(Node x) {
+  private Node max(final Node x) {
     if (x.right == null) {
       return x;
     } else {
@@ -235,23 +235,27 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @return     this method returns the value of the given
      *             book data else returns null.
      */
-  public Key floor(Key key) {
+  public Key floor(final Key key) {
     Node x = floor(root, key);
     if (x == null) {
       return null;
-    } else return x.key;
+    } else {
+      return x.key;
+    }
   }
-  /**.
+  /**
      * this method returns the value of the given
      * book data else returns null.
      * Time complexity is O(logN)
+     * it checks the element from root node to desired node
      *
+     * @param      node     node with bookdetails
      * @param      key   The key
      *
      * @return     this method returns the value of the given
      *             book data else returns null.
-     */
-  private Node floor(Node x, Key key) {
+    */
+  private Node floor(final Node x, final Key key) {
     if (x == null) {
       return null;
     }
@@ -259,7 +263,9 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     if (cmp == 0) {
       return x;
     }
-    if (cmp <  0) return floor(x.left, key);
+    if (cmp <  0) {
+      return floor(x.left, key);
+    }
     Node t = floor(x.right, key);
     if (t != null) {
       return t;
@@ -278,10 +284,13 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *             book data else returns null.
      */
 
-  public Key ceiling(Key key) {
+  public Key ceiling(final Key key) {
     Node x = ceiling(root, key);
-    if (x == null) return null;
-    else return x.key;
+    if (x == null) {
+      return null;
+    } else {
+      return x.key;
+    }
   }
   /**.
      * this method returns the value of the given
@@ -295,7 +304,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * @return     this method returns the value of the given
      *             book data else returns null.
      */
-  private Node ceiling(Node x, Key key) {
+  private Node ceiling(final Node x, final Key key) {
     if (x == null) {
       return null;
     }
