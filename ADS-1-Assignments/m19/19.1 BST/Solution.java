@@ -84,6 +84,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *
      * @param      key1   The key
      * @param      val   The value
+     * @param      sizeOne the size
      */
     Node(final Key key1, final Value val, final int sizeOne) {
       this.key = key1;
@@ -249,7 +250,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * Time complexity is O(logN)
      * it checks the element from root node to desired node
      *
-     * @param      node     node with bookdetails
+     * @param      x     node with bookdetails
      * @param      key   The key
      *
      * @return     this method returns the value of the given
