@@ -95,7 +95,7 @@ final class Solution {
   }
   /**.
    * main method is used to handle testcases
-   * Time complexity of this method is O(N).
+   * Time complexity of this method is O(NlogN).
    * N is the number of inputs.
    *
    * @param      args  The arguments
