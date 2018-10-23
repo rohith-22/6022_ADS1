@@ -189,13 +189,16 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * it checks only left side of tree to find minimum
      * element.
      *
-     * @param      node     node it starts the checkong
+     * @param      x     node it starts the checkong
      *
      * @return     returns minimum book details in the tree
      */
   private Node min(Node x) {
-    if (x.left == null) return x;
-    else                return min(x.left);
+    if (x.left == null) {
+      return x;
+    } else {
+      return min(x.left);
+    }
   }
   /**.
      * this method returns maximum element in the tree
@@ -211,13 +214,16 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * Time complexity is O(logN)
      * it checks only right side of tree to find max element
      *
-     * @param      node  The node
+     * @param      x  The node
      *
      * @return     eturns maximum element in the tree
      */
   private Node max(Node x) {
-    if (x.right == null) return x;
-    else                 return max(x.right);
+    if (x.right == null) {
+      return x;
+    } else {
+      return max(x.right);
+    }
   }
   /**.
      * this method returns the value of the given
@@ -231,8 +237,9 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      */
   public Key floor(Key key) {
     Node x = floor(root, key);
-    if (x == null) return null;
-    else return x.key;
+    if (x == null) {
+      return null;
+    } else return x.key;
   }
   /**.
      * this method returns the value of the given
@@ -245,13 +252,20 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      *             book data else returns null.
      */
   private Node floor(Node x, Key key) {
-    if (x == null) return null;
+    if (x == null) {
+      return null;
+    }
     int cmp = key.compareTo(x.key);
-    if (cmp == 0) return x;
+    if (cmp == 0) {
+      return x;
+    }
     if (cmp <  0) return floor(x.left, key);
     Node t = floor(x.right, key);
-    if (t != null) return t;
-    else return x;
+    if (t != null) {
+      return t;
+    } else {
+      return x;
+    }
   }
   /**.
      * this method returns the value of the given
@@ -275,20 +289,27 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
      * Time complexity is O(logN)
      * it checks the element from root node to desired node
      *
-     * @param      node  The node
+     * @param      x  The node
      * @param      key   The key
      *
      * @return     this method returns the value of the given
      *             book data else returns null.
      */
   private Node ceiling(Node x, Key key) {
-    if (x == null) return null;
+    if (x == null) {
+      return null;
+    }
     int cmp = key.compareTo(x.key);
-    if (cmp == 0) return x;
+    if (cmp == 0) {
+      return x;
+    }
     if (cmp < 0) {
       Node t = ceiling(x.left, key);
-      if (t != null) return t;
-      else return x;
+      if (t != null) {
+        return t;
+      } else {
+        return x;
+      }
     }
     return ceiling(x.right, key);
   }
@@ -343,7 +364,7 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
       return null;
     }
     int t = size(node.left);
-    if      (t > k) {
+    if (t > k) {
       return select(node.left,  k);
     } else if (t < k) {
       return select(node.right, k - t - 1);
@@ -354,11 +375,10 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
 
 }
-
 /**
  * Class for solution.
  */
-public class Solution {
+public final class Solution {
   /**
    * Constructs the object.
    */
