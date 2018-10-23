@@ -99,14 +99,31 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
   BinarySearchTree() {
 
   }
-
+  /**.
+  * This method is to add a key and value to BST.
+  * Time Complexity is O(N).
+  *
+  * @param      key    The key
+  * @param      value  The value
+  */
   public void put(final Key key, final Value value) {
     if (key == null) {
       return;
     }
     root = put(root, key, value);
   }
-
+  /**
+    * This method is to add element to BST
+    * Time Complexity is O(N) for worst case.
+    * element is added until it reaches to the
+    * position it should added at.
+    *
+    * @param      node   The node
+    * @param      key    The key
+    * @param      value  The value
+    *
+    * @return     returns node
+    */
   public Node put(final Node node, final Key key,
                   final Value value) {
     if (node == null) {
@@ -123,11 +140,27 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     node.size = 1 + size(node.left) + size(node.right);
     return node;
   }
-
+  /**.
+   * This method is to return the value of that key
+   * Time Complexity is O(N)
+   *
+   * @param      key   The key
+   *
+   * @return     returns the value.
+   */
   public Value get(final Key key) {
     return get(root, key);
   }
-
+  /**.
+   * This method is to return the value of that key
+   * Time Complexity is O(N)
+   *
+   * @param      node  the node where the book details and
+   *                   value.
+   * @param      key   The key
+   *
+   * @return     returns the value of that key.
+   */
   private Value get(final Node node, final Key key) {
     if (node == null) {
       return null;
@@ -141,28 +174,76 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
       return node.value;
     }
   }
+  /**.
+     * this method returns minimum element in the tree
+     * Time complexity is O(logN)
+     *
+     * @return     returns minimum book details in the tree
+     */
   public Key min() {
     return min(root).key;
   }
-
+  /**.
+     * this method returns minimum element in the tree
+     * Time complexity is O(logN)
+     * it checks only left side of tree to find minimum
+     * element.
+     *
+     * @param      node     node it starts the checkong
+     *
+     * @return     returns minimum book details in the tree
+     */
   private Node min(Node x) {
     if (x.left == null) return x;
     else                return min(x.left);
   }
+  /**.
+     * this method returns maximum element in the tree
+     * Time complexity is O(logN)
+     *
+     * @return     returns maximum element in the tree
+     */
   public Key max() {
     return max(root).key;
   }
-
+  /**.
+     * this method returns maximum element in the tree
+     * Time complexity is O(logN)
+     * it checks only right side of tree to find max element
+     *
+     * @param      node  The node
+     *
+     * @return     eturns maximum element in the tree
+     */
   private Node max(Node x) {
     if (x.right == null) return x;
     else                 return max(x.right);
   }
+  /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     *
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
   public Key floor(Key key) {
     Node x = floor(root, key);
     if (x == null) return null;
     else return x.key;
   }
-
+  /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     *
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
   private Node floor(Node x, Key key) {
     if (x == null) return null;
     int cmp = key.compareTo(x.key);
@@ -172,12 +253,34 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     if (t != null) return t;
     else return x;
   }
+  /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     *
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
+
   public Key ceiling(Key key) {
     Node x = ceiling(root, key);
     if (x == null) return null;
     else return x.key;
   }
-
+  /**.
+     * this method returns the value of the given
+     * book data else returns null.
+     * Time complexity is O(logN)
+     * it checks the element from root node to desired node
+     *
+     * @param      node  The node
+     * @param      key   The key
+     *
+     * @return     this method returns the value of the given
+     *             book data else returns null.
+     */
   private Node ceiling(Node x, Key key) {
     if (x == null) return null;
     int cmp = key.compareTo(x.key);
@@ -189,15 +292,35 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
     }
     return ceiling(x.right, key);
   }
+  /**.
+     * this method returns the element in that position
+     * Time complexity is O(logN)
+     *
+     * @param      k     position given as input
+     *
+     * @return     returns the element in that position
+     */
   public Key select(final int k) {
     Node node = select(root, k);
     return node.key;
   }
-
+  /**.
+     * size of tree
+     *
+     * @return     returns size of tree
+     */
   public int size() {
     return size(root);
   }
-
+  /**
+     * returns size of tree
+     * Time Complexity is O(1).
+     * it returns the size of that node.
+     *
+     * @param      node  The node
+     *
+     * @return     returns size of tree.
+     */
   private int size(final Node node) {
     if (node == null) {
       return 0;
@@ -205,6 +328,16 @@ class BinarySearchTree<Key extends Comparable<Key>, Value> {
       return node.size;
     }
   }
+  /**.
+     * this method returns the element in that position
+     * Time complexity is O(logN)
+     * it checks from root node to desired position
+     *
+     * @param      node  The node
+     * @param      k     position of node
+     *
+     * @return     returns node of the that position
+     */
   private Node select(final Node node, final int k) {
     if (node == null) {
       return null;
@@ -245,14 +378,14 @@ public class Solution {
       switch (tokens[0]) {
       case "put":
         objectBST.put(new Books(tokens[1], tokens[2], Double.parseDouble(
-                           tokens[2 + 1])),
-                Integer.parseInt(tokens[2 + 2]));
+                                  tokens[2 + 1])),
+                      Integer.parseInt(tokens[2 + 2]));
         break;
       case "get":
         System.out.println(objectBST.get(new Books(
-                                     tokens[1], tokens[2],
-                                     Double.parseDouble(
-                                       tokens[2 + 1]))));
+                                           tokens[1], tokens[2],
+                                           Double.parseDouble(
+                                             tokens[2 + 1]))));
         break;
       case "max":
         System.out.println(objectBST.max());
@@ -263,14 +396,14 @@ public class Solution {
       case "floor":
         System.out.println(objectBST.floor(
                              new Books(tokens[1], tokens[2],
-                                      Double.parseDouble(
-                                        tokens[2 + 1]))));
+                                       Double.parseDouble(
+                                         tokens[2 + 1]))));
         break;
       case "ceiling":
         System.out.println(objectBST.ceiling(
                              new Books(tokens[1], tokens[2],
-                                      Double.parseDouble(
-                                        tokens[2 + 1]))));
+                                       Double.parseDouble(
+                                         tokens[2 + 1]))));
         break;
       case "select":
         System.out.println(objectBST.select(Integer.parseInt(tokens[1])));
