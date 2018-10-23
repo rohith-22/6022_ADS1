@@ -14,7 +14,7 @@ class Books implements Comparable<Books> {
   /**
    * price variable.
    */
-  private String priceOfBook;
+  private Double priceOfBook;
   /**
    * Constructs the object.
    *
@@ -23,7 +23,7 @@ class Books implements Comparable<Books> {
    * @param      price     The price
    */
   Books(final String bookName, final String author,
-        final String price) {
+        final Double price) {
     nameOfBook = bookName;
     authorOfBook = author;
     priceOfBook = price;
@@ -244,14 +244,15 @@ public class Solution {
       String[] tokens = sc.nextLine().split(",");
       switch (tokens[0]) {
       case "put":
-        objectBST.put(new Books(tokens[1], tokens[2],
-                                tokens[2 + 1]),
-                      Integer.parseInt(tokens[2 + 2]));
+        objectBST.put(new Books(tokens[1], tokens[2], Double.parseDouble(
+                           tokens[2 + 1])),
+                Integer.parseInt(tokens[2 + 2]));
         break;
       case "get":
         System.out.println(objectBST.get(new Books(
-                                           tokens[1], tokens[2],
-                                           tokens[2 + 1])));
+                                     tokens[1], tokens[2],
+                                     Double.parseDouble(
+                                       tokens[2 + 1]))));
         break;
       case "max":
         System.out.println(objectBST.max());
@@ -262,15 +263,18 @@ public class Solution {
       case "floor":
         System.out.println(objectBST.floor(
                              new Books(tokens[1], tokens[2],
-                                       tokens[2 + 1])));
+                                      Double.parseDouble(
+                                        tokens[2 + 1]))));
         break;
       case "ceiling":
         System.out.println(objectBST.ceiling(
                              new Books(tokens[1], tokens[2],
-                                       tokens[2 + 1])));
+                                      Double.parseDouble(
+                                        tokens[2 + 1]))));
         break;
       case "select":
         System.out.println(objectBST.select(Integer.parseInt(tokens[1])));
+        break;
       default:
         break;
       }
