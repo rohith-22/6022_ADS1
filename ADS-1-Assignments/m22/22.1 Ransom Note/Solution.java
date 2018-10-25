@@ -133,7 +133,8 @@ class RansomNote {
 	 * @param      m     { mag words }
 	 * @param      n     { note words }
 	 */
-	public RansomNote(final int ms, final int ns, final String[] m, final String[] n) {
+	public RansomNote(final int ms, final int ns,
+		final String[] m, final String[] n) {
 		msize = ms;
 		nsize = ns;
 		mag = m;
