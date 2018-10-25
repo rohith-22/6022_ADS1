@@ -62,7 +62,7 @@ class Hashing {
 	 *
 	 * @param      s     { of type int }
 	 */
-	public Hashing(int s) {
+	public Hashing(final int s) {
 		size = s;
 		hash = new Linkedlist[s];
 	}
@@ -73,7 +73,7 @@ class Hashing {
 	 *
 	 * @return     { int }
 	 */
-	public int key(String value) {
+	public int key(final String value) {
 		return Math.abs(value.hashCode() % size);
 	}
 	/**.
@@ -82,7 +82,7 @@ class Hashing {
 	 * @param      word  The word
 	 * @param      pos   The position
 	 */
-	public void insert(String word, int pos) {
+	public void insert(final String word, final int pos) {
 
 		if (hash[pos] == null) {
 			Linkedlist l = new Linkedlist();
@@ -196,7 +196,7 @@ class Solution {
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int msize = sc.nextInt();
 		int nsize = sc.nextInt();
