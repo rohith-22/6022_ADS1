@@ -19,8 +19,5 @@ Starting audit...
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:136:9: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:171: Line is longer than 80 characters (found 85). [LineLength]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:173: Line is longer than 80 characters (found 83). [LineLength]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:190: First sentence should end with a period. [JavadocStyle]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:193:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:194: First sentence should end with a period. [JavadocStyle]
 Audit done.
-Checkstyle ends with 23 errors.
+Checkstyle ends with 20 errors.

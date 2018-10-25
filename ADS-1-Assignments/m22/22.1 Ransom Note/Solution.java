@@ -187,11 +187,17 @@ class RansomNote {
 	}
 
 }
-/**
+/**.
  * Solution class
  */
-class Solution {
-	/**
+final class Solution {
+	/**.
+	 * constructor
+	 */
+	private Solution() {
+		//Constructor
+	}
+	/**.
 	 * main method
 	 *
 	 * @param      args  The arguments
