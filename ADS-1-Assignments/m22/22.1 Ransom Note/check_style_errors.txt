@@ -6,7 +6,7 @@ Starting audit...
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:4:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:4:16: Variable 'word' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:5:9: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:5:14: Variable 'next' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:5:14: Variable 'link' must be private and have accessor methods. [VisibilityModifier]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:6:9: Missing a Javadoc comment. [JavadocMethod]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:6:9: Redundant 'public' modifier. [RedundantModifier]
 [ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m22/22.1 Ransom Note/Solution.java:6:21: '(' is preceded with whitespace. [MethodParamPad]

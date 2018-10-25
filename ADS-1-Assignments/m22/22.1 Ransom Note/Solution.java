@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Arrays;
 class Node {
 	String word;
-	Node next = null;
+	Node link = null;
 	public Node (String d) {
 		word = d;
 	}
@@ -16,7 +16,7 @@ class Linkedlist {
 		} else {
 			Node temp = head;
 			head = newnode;
-			newnode.next = temp;
+			newnode.link = temp;
 		}
 	}
 }
@@ -76,16 +76,16 @@ class RansomNote {
 				int f = 1;
 				if (temp.word.equals(note[i])) {
 					f = 0;
-					temp = temp.next;
+					temp = temp.link;
 					continue;
 				} else {
-					while (temp.next != null) {
-						if (temp.next.word.equals(note[i])) {
+					while (temp.link != null) {
+						if (temp.link.word.equals(note[i])) {
 							f = 0;
-							temp.next = temp.next.next;
+							temp.link = temp.link.link;
 							break;
 						} else {
-							temp = temp.next;
+							temp = temp.link;
 						}
 					}
 				}
