@@ -1,10 +1,9 @@
 import java.util.Scanner;
-import java.util.Arrays;
 /**.
  * Class for node.
  */
 class Node {
-	/**.
+	/**
      * word.
      */
 	private String word;
@@ -13,7 +12,7 @@ class Node {
 	 */
 	private Node link = null;
 	/**
-	 * count of words
+	 * count of words.
 	 */
 	private int count = 1;
 	/**.
@@ -21,7 +20,7 @@ class Node {
 	 *
 	 * @param      d     String
 	 */
-	public Node (final String d) {
+	public Node(final String d) {
 		word = d;
 	}
 	/**
@@ -29,7 +28,7 @@ class Node {
 	 *
 	 * @return     The word.
 	 */
-	public String getWord(){
+	public String getWord() {
 		return this.word;
 	}
 	/**
@@ -37,7 +36,7 @@ class Node {
 	 *
 	 * @return     The link.
 	 */
-	public Node getLink(){
+	public Node getLink() {
 		return this.link;
 	}
 	/**
@@ -45,7 +44,7 @@ class Node {
 	 *
 	 * @param      n     new link
 	 */
-	public void setLink(final Node n){
+	public void setLink(final Node n) {
 		this.link = n;
 	}
 	/**
@@ -53,7 +52,7 @@ class Node {
 	 *
 	 * @return     The count.
 	 */
-	public int getCount(){
+	public int getCount() {
 		return this.count;
 	}
 	/**
@@ -61,8 +60,8 @@ class Node {
 	 *
 	 * @param      c     new count
 	 */
-	public void setCount(final int c){
-		this.count=c;
+	public void setCount(final int c) {
+		this.count = c;
 	}
 }
 /**.
@@ -72,7 +71,15 @@ class Linkedlist {
 	/**.
 	 * head node
 	 */
-	Node head = null;
+	private Node head = null;
+	/**
+     * Gets the head.
+     *
+     * @return     The head.
+     */
+    public Node getHead() {
+        return head;
+    }
 	/**.
 	 * inasert method
 	 *
@@ -118,7 +125,7 @@ class Hashing {
 	 *
 	 * @param      s     size
 	 */
-	public Hashing(final int s) {
+	Hashing(final int s) {
 		size = s;
 		hash = new Linkedlist[s];
 	}
@@ -189,7 +196,7 @@ class RansomNote {
 	 * @param      m     { mag words }
 	 * @param      n     { note words }
 	 */
-	public RansomNote(final int ms, final int ns,
+	RansomNote(final int ms, final int ns,
 		final String[] m, final String[] n) {
 		msize = ms;
 		nsize = ns;
@@ -217,7 +224,7 @@ class RansomNote {
 				System.out.println("No");
 				return;
 			} else {
-				Node temp = hashtable[pos].head;
+				Node temp = hashtable[pos].getHead();
 				int f = 1;
 				if (temp.getWord().equals(note[i])) {
 					f = 0;
@@ -225,9 +232,11 @@ class RansomNote {
 					continue;
 				} else {
 					while (temp.getLink() != null) {
-						if (temp.getLink().getWord().equals(note[i])) {
+						if (temp.getLink().getWord().equals(
+							note[i])) {
 							f = 0;
-							temp.setLink(temp.getLink().getLink());
+							temp.setLink(
+								temp.getLink().getLink());
 							break;
 						} else {
 							temp = temp.getLink();
