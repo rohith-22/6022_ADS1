@@ -7,11 +7,15 @@ class Node {
 	/**.
      * word.
      */
-	String word;
+	private String word;
 	/**.
 	 * link of node
 	 */
-	Node link = null;
+	private Node link = null;
+	/**
+	 * count of words
+	 */
+	private int count = 1;
 	/**.
 	 * Constructs the object.
 	 *
@@ -19,6 +23,46 @@ class Node {
 	 */
 	public Node (final String d) {
 		word = d;
+	}
+	/**
+	 * Gets the word.
+	 *
+	 * @return     The word.
+	 */
+	public String getWord(){
+		return this.word;
+	}
+	/**
+	 * Gets the link.
+	 *
+	 * @return     The link.
+	 */
+	public Node getLink(){
+		return this.link;
+	}
+	/**
+	 * Sets the link.
+	 *
+	 * @param      n     new link
+	 */
+	public void setLink(final Node n){
+		this.link = n;
+	}
+	/**
+	 * Gets the count.
+	 *
+	 * @return     The count.
+	 */
+	public int getCount(){
+		return this.count;
+	}
+	/**
+	 * Sets the count.
+	 *
+	 * @param      c     new count
+	 */
+	public void setCount(final int c){
+		this.count=c;
 	}
 }
 /**.
@@ -35,14 +79,26 @@ class Linkedlist {
 	 * @param      word  The word
 	 */
 	public void insert(final String word) {
-		Node newnode = new Node(word);
-		if (head == null) {
-			head = newnode;
-		} else {
-			Node temp = head;
-			head = newnode;
-			newnode.link = temp;
-		}
+        Node newnode = new Node(word);
+        if (head == null) {
+            head = newnode;
+        } else {
+            Node temp = head;
+            int f = 0;
+            while (temp != null) {
+                if (temp.getWord().equals(word)) {
+                    f = 1;
+                    temp.setCount(temp.getCount() + 1);
+                    break;
+                } else {
+                    temp = temp.getLink();
+                }
+            }
+            if (f == 0) {
+                newnode.setLink(head);
+                head = newnode;
+            }
+        }
 	}
 }
 /**.
@@ -52,15 +108,15 @@ class Hashing {
 	/**.
 	 * hash  linked list
 	 */
-	Linkedlist[] hash;
+	private Linkedlist[] hash;
 	/**.
 	 * size variable
 	 */
-	int size;
+	private int size;
 	/**.
 	 * method for hashing
 	 *
-	 * @param      s     { of type int }
+	 * @param      s     size
 	 */
 	public Hashing(final int s) {
 		size = s;
@@ -71,7 +127,7 @@ class Hashing {
 	 *
 	 * @param      value  The value
 	 *
-	 * @return     { int }
+	 * @return     int
 	 */
 	public int key(final String value) {
 		return Math.abs(value.hashCode() % size);
@@ -108,23 +164,23 @@ class RansomNote {
 	/**.
 	 * variable for msize
 	 */
-	int msize;
+	private int msize;
 	/**.
 	 * vairable for note size
 	 */
-	int nsize;
+	private int nsize;
 	/**.
 	 * array for mag words
 	 */
-	String[] mag;
+	private String[] mag;
 	/**.
 	 * array for note words
 	 */
-	String[] note;
+	private String[] note;
 	/**.
 	 * variable for hasing
 	 */
-	Hashing h;
+	private Hashing h;
 	/**.
 	 * constructor
 	 *
@@ -163,18 +219,18 @@ class RansomNote {
 			} else {
 				Node temp = hashtable[pos].head;
 				int f = 1;
-				if (temp.word.equals(note[i])) {
+				if (temp.getWord().equals(note[i])) {
 					f = 0;
-					temp = temp.link;
+					temp = temp.getLink();
 					continue;
 				} else {
-					while (temp.link != null) {
-						if (temp.link.word.equals(note[i])) {
+					while (temp.getLink() != null) {
+						if (temp.getLink().getWord().equals(note[i])) {
 							f = 0;
-							temp.link = temp.link.link;
+							temp.setLink(temp.getLink().getLink());
 							break;
 						} else {
-							temp = temp.link;
+							temp = temp.getLink();
 						}
 					}
 				}
