@@ -47,21 +47,21 @@ class Hashing {
 class RansomNote {
 	int msize;
 	int nsize;
-	String[] magazine;
+	String[] mag;
 	String[] note;
 	Hashing h;
 	public RansomNote(int ms, int ns, String[] m, String[] n) {
 		msize = ms;
 		nsize = ns;
-		magazine = m;
+		mag = m;
 		note = n;
 		h = new Hashing(msize);
 	}
 	 
 	public void creatingHashmap() {
 		for (int i = 0; i < msize; i++) {
-			int pos = h.key(magazine[i]);
-			h.insert(magazine[i], pos);
+			int pos = h.key(mag[i]);
+			h.insert(mag[i], pos);
 		}
 	}
 	public void checking() {
@@ -105,9 +105,9 @@ class Solution {
 		int msize = sc.nextInt();
 		int nsize = sc.nextInt();
 		sc.nextLine();
-		String[] magazine = sc.nextLine().split(" ");
+		String[] mag = sc.nextLine().split(" ");
 		String[] note = sc.nextLine().split(" ");
-		RansomNote r = new RansomNote(msize, nsize, magazine, note);
+		RansomNote r = new RansomNote(msize, nsize, mag, note);
 		r.creatingHashmap();
 		r.checking();
 	}
