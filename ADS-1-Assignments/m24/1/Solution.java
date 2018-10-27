@@ -25,7 +25,7 @@ public class Solution {
 			case "2":
 				if (studentInfo != null) {
 					String[] tokensOne = studentInfo.split("&&");
-					System.out.println(tokensOne[1]);
+					System.out.println(Double.parseDouble(tokensOne[1]));
 				} else {
 					System.out.println("Student doesn't exists...");
 				}
