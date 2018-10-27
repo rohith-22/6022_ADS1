@@ -1,11 +1,4 @@
 Starting audit...
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:1: Missing a Javadoc comment. [JavadocType]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:2:3: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:4:3: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:5:3: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:6:3: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:7:3: Missing a Javadoc comment. [JavadocVariable]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:75:30: '0x7fffffff' is a magic number. [MagicNumber]
-[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:145: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] /Users/rohithkumar/Desktop/git/ADS1/6022_ADS1/ADS-1-Assignments/m24/1/LinearProbingHashST.java:95:30: '0x7fffffff' is a magic number. [MagicNumber]
 Audit done.
-Checkstyle ends with 8 errors.
+Checkstyle ends with 1 errors.
