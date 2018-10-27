@@ -60,7 +60,8 @@ public final class Solution {
 			objectTwoBST.put(Double.parseDouble(tokens[2]), tokens[1]);
 
 		}
-		while (sc.hasNext()) {
+		int outputs = Integer.parseInt(sc.nextLine());
+		for (int i = 0; i < outputs; i++) {
 			String[] tokens = sc.nextLine().split(" ");
 			switch (tokens[2]) {
 			case "1":
